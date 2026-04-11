@@ -1,8 +1,11 @@
 # Kid Game - Linux Treasure Hunt
 
-A local treasure hunt game for kids to discover computers, Linux basics, and desktop navigation through small missions.
+A local treasure hunt game for kids to discover computers, Linux basics, and
+desktop navigation through small missions.
 
-This project is designed for two children using separate Linux user sessions on the same machine, without admin rights. The game watches for simple actions in each child's own session and unlocks the next mission automatically.
+This project is designed for two children using separate Linux user sessions on
+the same machine, without admin rights. The game watches for simple actions in
+each child's own session and unlocks the next mission automatically.
 
 ## Goal
 
@@ -44,7 +47,8 @@ Python is the better choice for this project.
 
 ### Why not Bash for the main game
 
-Bash is good for very small glue scripts, but it becomes harder to manage when you need:
+Bash is good for very small glue scripts, but it becomes harder to manage when
+you need:
 
 - structured progress tracking
 - multiple children
@@ -57,11 +61,13 @@ Bash is good for very small glue scripts, but it becomes harder to manage when y
 
 Use **Python for the game engine**.
 
-Optionally use a few tiny Bash helpers later if needed for desktop-specific checks or launcher integration.
+Optionally use a few tiny Bash helpers later if needed for desktop-specific
+checks or launcher integration.
 
 ## Core design
 
-The game engine runs as a user-level background process inside each child's session.
+The game engine runs as a user-level background process inside each child's
+session.
 
 Every 2 seconds it:
 
@@ -72,7 +78,8 @@ Every 2 seconds it:
 5. shows a notification or clue
 6. writes the updated state back to disk
 
-Because each child has a separate Linux account and separate save file, they can play in any order without spoiling each other.
+Because each child has a separate Linux account and separate save file, they can
+play in any order without spoiling each other.
 
 ## Main principles
 
@@ -91,7 +98,8 @@ No shared progress is required.
 
 The clue text should use short, easy words.
 
-This is especially important for Romy. Sentences should be closer to early-reader level than standard game text.
+This is especially important for Romy. Sentences should be closer to
+early-reader level than standard game text.
 
 Examples:
 
@@ -196,7 +204,8 @@ Good first mission types:
 - `text_file_created`
 - `simple_terminal_command_done`
 
-Some checks will be easy and reliable. Others may need approximation depending on the desktop environment.
+Some checks will be easy and reliable. Others may need approximation depending
+on the desktop environment.
 
 ## XFCE first, GNOME later
 
@@ -230,7 +239,8 @@ Examples:
 - "Nice work! You found the moon key."
 - "Mission done. Open the next clue."
 
-If notification reliability becomes a problem, a small game window can be added later.
+If notification reliability becomes a problem, a small game window can be added
+later.
 
 ## Suggested first missions
 
@@ -264,7 +274,8 @@ This is a good first implementation because it is:
 - easy to debug
 - enough for a local game
 
-It is not the most elegant event system, but it is the right trade-off for version 1.
+It is not the most elegant event system, but it is the right trade-off for
+version 1.
 
 ### JSON save files
 
