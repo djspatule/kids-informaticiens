@@ -53,6 +53,10 @@ fi
 USER_HOME="/home/$PLAYER"
 SAVE_FILE="$USER_HOME/game/saves/state.json"
 
+# Détecter le desktop
+BUREAU=$(sudo -u "$PLAYER" xdg-user-dir DESKTOP 2>/dev/null || echo "$USER_HOME/Desktop")
+[[ -z "$BUREAU" || "$BUREAU" == "$USER_HOME" ]] && BUREAU="$USER_HOME/Desktop"
+
 # ---------------------------------------------------------------------------
 # Affichage et confirmation
 # ---------------------------------------------------------------------------
@@ -61,25 +65,17 @@ echo -e "${BOLD}${YELLOW}⚠️  RÉINITIALISATION DU JOUEUR : ${PLAYER^^}${RESE
 echo ""
 echo "Cette opération va :"
 echo "  • Supprimer la progression ($SAVE_FILE)"
-echo "  • Supprimer les dossiers de jeu créés par le joueur :"
+echo "  • Supprimer les dossiers/fichiers créés pendant le jeu"
 
 if [[ "$PLAYER" == "romy" ]]; then
-    BUREAU=$(sudo -u romy xdg-user-dir DESKTOP 2>/dev/null || echo "$USER_HOME/Bureau")
-    echo "      $BUREAU/Fusée/"
-    echo "      $USER_HOME/Étoiles/"
-    echo "      $USER_HOME/Mission/"
-    echo "      $USER_HOME/Trouvailles/"
-    echo "      $USER_HOME/Vaisseau/"
+    echo "      $BUREAU/Mission-Spatiale/"
+    echo "      $BUREAU/rapport-mission.txt"
+    echo "      $BUREAU/rapport-final.txt"
 else
-    BUREAU=$(sudo -u oscar xdg-user-dir DESKTOP 2>/dev/null || echo "$USER_HOME/Bureau")
-    echo "      $BUREAU/Mission_Spatiale/"
-    echo "      $USER_HOME/Planètes/"
-    echo "      $USER_HOME/Base_Spatiale/"
-    echo "      $USER_HOME/Mission_Journal/"
-    echo "      $USER_HOME/Transmissions/"
+    echo "      $BUREAU/Base-Spatiale/"
 fi
 
-echo "  • Recréer tout le contenu de départ"
+echo "  • Recréer le raccourci et les fichiers de départ"
 echo ""
 echo -e "${RED}${BOLD}Cette action est irréversible !${RESET}"
 echo ""
@@ -103,7 +99,7 @@ else
     info "Aucune sauvegarde à supprimer."
 fi
 
-# Aussi supprimer le log
+# Supprimer le log
 LOG_FILE="$PROJECT_ROOT/logs/$PLAYER.log"
 if [[ -f "$LOG_FILE" ]]; then
     rm -f "$LOG_FILE"
@@ -111,31 +107,24 @@ if [[ -f "$LOG_FILE" ]]; then
 fi
 
 # ---------------------------------------------------------------------------
-# Suppression des dossiers de contenu
+# Suppression des dossiers créés pendant le jeu
 # ---------------------------------------------------------------------------
 info "Suppression des dossiers de jeu..."
 
 if [[ "$PLAYER" == "romy" ]]; then
-    rm -rf "$BUREAU/Fusée" 2>/dev/null || warn "Impossible de supprimer $BUREAU/Fusée"
-    rm -rf "$USER_HOME/Étoiles" 2>/dev/null || warn "Impossible de supprimer $USER_HOME/Étoiles"
-    rm -rf "$USER_HOME/Mission" 2>/dev/null || warn "Impossible de supprimer $USER_HOME/Mission"
-    rm -rf "$USER_HOME/Trouvailles" 2>/dev/null || warn "Impossible de supprimer $USER_HOME/Trouvailles"
-    rm -rf "$USER_HOME/Vaisseau" 2>/dev/null || warn "Impossible de supprimer $USER_HOME/Vaisseau"
+    rm -rf "$BUREAU/Mission-Spatiale" 2>/dev/null || warn "Impossible de supprimer Mission-Spatiale"
+    rm -f  "$BUREAU/rapport-mission.txt" 2>/dev/null || true
+    rm -f  "$BUREAU/rapport-final.txt"   2>/dev/null || true
 else
-    rm -rf "$BUREAU/Mission_Spatiale" 2>/dev/null || warn "Impossible de supprimer $BUREAU/Mission_Spatiale"
-    rm -rf "$USER_HOME/Planètes" 2>/dev/null || warn "Impossible de supprimer $USER_HOME/Planètes"
-    rm -rf "$USER_HOME/Base_Spatiale" 2>/dev/null || warn "Impossible de supprimer $USER_HOME/Base_Spatiale"
-    rm -rf "$USER_HOME/Mission_Journal" 2>/dev/null || warn "Impossible de supprimer $USER_HOME/Mission_Journal"
-    rm -rf "$USER_HOME/Transmissions" 2>/dev/null || warn "Impossible de supprimer $USER_HOME/Transmissions"
+    rm -rf "$BUREAU/Base-Spatiale" 2>/dev/null || warn "Impossible de supprimer Base-Spatiale"
 fi
 
-success "Dossiers supprimés"
+success "Contenu de jeu supprimé"
 
 # ---------------------------------------------------------------------------
-# Réinstallation du contenu
+# Réinstallation du contenu initial
 # ---------------------------------------------------------------------------
-info "Réinstallation du contenu initial..."
-
+info "Réinstallation du contenu initial (raccourci, start.sh)..."
 bash "$SCRIPT_DIR/install_${PLAYER}.sh"
 
 echo ""

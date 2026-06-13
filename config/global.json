@@ -3,7 +3,6 @@
   "poll_interval_ms": 2000,
   "notification_timeout_ms": 8000,
   "log_level": "INFO",
-  "source_dir": "/home/lion/Documents/kids-informaticiens",
   "version": "1.0.0",
   "hint_penalty_points": 5
 }

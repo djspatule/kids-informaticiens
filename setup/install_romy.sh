@@ -70,12 +70,15 @@ EOF
 success "Créé : game/message_bienvenue.txt"
 
 # --- game/start.sh ---
-cat > "$GAME_DIR/start.sh" <<'EOF'
+# Injecter le vrai chemin du projet au moment de l'installation
+INSTALL_PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cat > "$GAME_DIR/start.sh" <<STARTEOF
 #!/bin/bash
 # Lance le jeu Mission Espace pour Romy
-cd /home/lion/Documents/kids-informaticiens
+# Installé depuis : $INSTALL_PROJECT_ROOT
+cd "$INSTALL_PROJECT_ROOT"
 exec python3 game.py romy
-EOF
+STARTEOF
 
 chmod +x "$GAME_DIR/start.sh"
 success "Créé : game/start.sh (exécutable)"

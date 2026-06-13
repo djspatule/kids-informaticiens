@@ -66,11 +66,14 @@ def load_global_config() -> dict:
 
 def load_state(save_file: str) -> dict | None:
     """Charge l'état du joueur. Retourne None si la partie n'a pas encore commencé."""
-    p = Path(save_file)
-    if not p.exists():
+    try:
+        p = Path(save_file)
+        if not p.exists():
+            return None
+        data = load_json(p)
+        return data if data else None
+    except (PermissionError, OSError):
         return None
-    data = load_json(p)
-    return data if data else None
 
 
 # ---------------------------------------------------------------------------
@@ -79,15 +82,18 @@ def load_state(save_file: str) -> dict | None:
 
 def load_missions(missions_dir: str) -> dict[str, dict]:
     """Retourne un dict {mission_id: mission_data} pour le répertoire donné."""
-    d = PROJECT_ROOT / missions_dir
-    missions: dict[str, dict] = {}
-    if not d.exists():
+    try:
+        d = PROJECT_ROOT / missions_dir
+        missions: dict[str, dict] = {}
+        if not d.exists():
+            return missions
+        for path in sorted(d.glob("mission_*.json")):
+            data = load_json(path)
+            if data:
+                missions[path.stem] = data
         return missions
-    for path in sorted(d.glob("mission_*.json")):
-        data = load_json(path)
-        if data:
-            missions[path.stem] = data
-    return missions
+    except (PermissionError, OSError):
+        return {}
 
 
 def total_points(missions: dict[str, dict]) -> int:
