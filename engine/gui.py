@@ -163,7 +163,8 @@ class MissionWindow(tk.Tk):
         self.title("🚀 Mission Espace")
         self.configure(bg=BG_DEEP)
         self.resizable(False, False)
-        self.attributes("-topmost", True)
+        # Allow closing with the window X button
+        self.protocol("WM_DELETE_WINDOW", self.destroy)
         # Try to set a text icon — works on some WMs
         try:
             self.iconname("🚀")

@@ -130,40 +130,6 @@ step "Installation du contenu pour Oscar"
 bash "$SCRIPT_DIR/install_oscar.sh"
 
 # ---------------------------------------------------------------------------
-# Étape 5 : Autostart XFCE
-# ---------------------------------------------------------------------------
-step "Configuration de l'autostart XFCE"
-
-setup_autostart() {
-    local username="$1"
-    local user_home="/home/$username"
-    local autostart_dir="$user_home/.config/autostart"
-    local desktop_file="$autostart_dir/mission-espace.desktop"
-
-    mkdir -p "$autostart_dir"
-    chown "$username:$username" "$autostart_dir"
-
-    cat > "$desktop_file" <<EOF
-[Desktop Entry]
-Type=Application
-Name=Mission Espace
-Comment=Le jeu d'exploration spatiale de $username
-Exec=/home/$username/game/start.sh
-Icon=rocket
-Hidden=false
-NoDisplay=false
-X-GNOME-Autostart-enabled=true
-EOF
-
-    chown "$username:$username" "$desktop_file"
-    chmod 644 "$desktop_file"
-    success "Autostart configuré pour $username : $desktop_file"
-}
-
-setup_autostart romy
-setup_autostart oscar
-
-# ---------------------------------------------------------------------------
 # Étape 6 : Permissions sur les logs du projet
 # ---------------------------------------------------------------------------
 step "Initialisation du répertoire de logs"
