@@ -1,0 +1,16 @@
+{
+  "player": "romy",
+  "display_name": "Romy",
+  "profile": "easy",
+  "color_theme": "#CE93D8",
+  "role_title": "Capitaine",
+  "missions_dir": "missions/romy",
+  "first_mission": "mission_01",
+  "total_missions": 8,
+  "secret_code": "ETOILE-ROMY-2026",
+  "home_dir": "/home/romy",
+  "game_dir": "/home/romy/game",
+  "desktop_dir_name": "Desktop",
+  "save_file": "/home/romy/game/saves/state.json",
+  "log_file": "logs/romy.log"
+}

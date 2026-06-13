@@ -1,0 +1,11 @@
+{
+  "id": "mission_05",
+  "title": "🌌 Mission 5 — Fond d'écran galactique",
+  "description": "Commandant, il est temps de personnaliser votre poste de commande !\n\nChange le fond d'écran de l'ordinateur pour une image de l'espace (ou toute autre image que tu aimes).\n\nProcédure :\n1. Clic droit sur le Bureau\n2. 'Paramètres du Bureau'\n3. Changer l'image de fond\n4. Appliquer",
+  "hint": "Clic droit sur le Bureau → Paramètres du Bureau → changer l'image",
+  "points": 15,
+  "check": {
+    "type": "wallpaper_changed"
+  },
+  "success_message": "Poste de commande personnalisé ! Le meilleur bureau de tout le système solaire !"
+}

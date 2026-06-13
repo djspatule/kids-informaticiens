@@ -1,0 +1,11 @@
+{
+  "id": "mission_03",
+  "title": "🖼️ Mission 3 — Décoration du poste de commande",
+  "description": "Super travail, Capitaine !\n\nTon poste de commande a besoin d'une touche personnelle. Change le fond d'écran de ton ordinateur !\n\n1. Fais un clic droit sur le Bureau\n2. Choisis 'Paramètres du Bureau'\n3. Clique sur 'Image de fond'\n4. Choisis une nouvelle image que tu aimes\n5. Clique sur 'Appliquer'",
+  "hint": "Clic droit sur le Bureau → 'Paramètres du Bureau' → cherche 'Image de fond' ou 'Fond d'écran'",
+  "points": 15,
+  "check": {
+    "type": "wallpaper_changed"
+  },
+  "success_message": "Magnifique ! Ton vaisseau spatial a maintenant le plus beau cockpit de la galaxie !"
+}

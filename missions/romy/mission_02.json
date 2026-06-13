@@ -1,0 +1,14 @@
+{
+  "id": "mission_02",
+  "title": "✏️ Mission 2 — Journal de bord",
+  "description": "Bien joué, Capitaine Romy !\n\nTout astronaute qui se respecte tient un journal de bord. Tu dois créer un fichier texte dans ton dossier 'Mission-Spatiale'.\n\n1. Ouvre le dossier 'Mission-Spatiale' sur ton Bureau\n2. Fais un clic droit à l'intérieur\n3. Crée un fichier texte nommé 'journal-de-bord.txt'\n4. Écris au moins la phrase : 'Je suis Capitaine Romy !'",
+  "hint": "Dans le dossier Mission-Spatiale : clic droit → Créer un fichier → nomme-le 'journal-de-bord.txt'",
+  "points": 25,
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Mission-Spatiale/journal-de-bord.txt",
+    "text": "Capitaine Romy",
+    "case_sensitive": false
+  },
+  "success_message": "Journal de bord enregistré ! La galaxie entière connaît ton nom maintenant !"
+}

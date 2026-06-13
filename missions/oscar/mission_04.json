@@ -1,0 +1,12 @@
+{
+  "id": "mission_04",
+  "title": "📊 Mission 4 — Premier rapport",
+  "description": "Commandant Oscar, rédigez votre premier rapport officiel !\n\nCrée un fichier 'rapport-01.txt' dans le dossier 'Rapports' (dans Base-Spatiale).\n\nEcris-y :\n- Ton nom\n- Combien de dossiers tu as créés jusqu'ici\n- Ce que tu penses de l'exploration spatiale !",
+  "hint": "Base-Spatiale → Rapports → clic droit → Créer fichier → 'rapport-01.txt' → écris ton rapport",
+  "points": 25,
+  "check": {
+    "type": "file_exists",
+    "path": "{desktop}/Base-Spatiale/Rapports/rapport-01.txt"
+  },
+  "success_message": "Rapport reçu et archivé ! Tu es un vrai Commandant de l'espace !"
+}

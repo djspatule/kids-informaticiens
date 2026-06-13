@@ -1,0 +1,23 @@
+{
+  "id": "mission_04",
+  "title": "📋 Mission 4 — Rapport de mission",
+  "description": "Capitaine Romy, nous avons besoin de ton rapport !\n\nCrée un nouveau fichier texte sur ton Bureau appelé 'rapport-mission.txt'.\n\nDans ce fichier, écris :\n- Ton nom (Romy)\n- La date d'aujourd'hui\n- Une phrase sur ce que tu as appris\n\nExemple :\nNom : Romy\nDate : 13 juin 2026\nJ'ai appris à créer des fichiers !",
+  "hint": "Bureau → clic droit → Créer un fichier → 'rapport-mission.txt' → double-clic pour l'ouvrir et écrire",
+  "points": 20,
+  "check": {
+    "type": "all_of",
+    "checks": [
+      {
+        "type": "file_exists",
+        "path": "{desktop}/rapport-mission.txt"
+      },
+      {
+        "type": "file_contains",
+        "path": "{desktop}/rapport-mission.txt",
+        "text": "romy",
+        "case_sensitive": false
+      }
+    ]
+  },
+  "success_message": "Rapport reçu à la base ! Tu es une vraie professionnelle de l'espace !"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "mission_01",
+  "title": "🚀 Mission 1 — Lancement du programme",
+  "description": "Commandant Oscar, bienvenue !\n\nLe Centre de Contrôle Spatial a besoin de toi pour organiser notre base de données.\n\nCrée un dossier 'Base-Spatiale' sur ton Bureau. C'est là que tout ton travail sera sauvegardé.",
+  "hint": "Clic droit sur le Bureau → 'Créer un nouveau dossier' → tape 'Base-Spatiale'",
+  "points": 15,
+  "check": {
+    "type": "folder_exists",
+    "path": "{desktop}/Base-Spatiale"
+  },
+  "success_message": "Dossier de base créé ! Le Centre de Contrôle Spatial est opérationnel !"
+}

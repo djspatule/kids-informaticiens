@@ -1,0 +1,25 @@
+{
+  "id": "mission_03",
+  "title": "🗂️ Mission 3 — Architecture des données",
+  "description": "Excellente communication, Commandant !\n\nMaintenant organisez la base. Dans 'Base-Spatiale', crée ces 3 dossiers :\n• 'Rapports'\n• 'Cartes-Stellaires'\n• 'Journaux'",
+  "hint": "Dans Base-Spatiale : 3 fois clic droit → Créer un dossier, avec chacun des noms indiqués",
+  "points": 20,
+  "check": {
+    "type": "all_of",
+    "checks": [
+      {
+        "type": "folder_exists",
+        "path": "{desktop}/Base-Spatiale/Rapports"
+      },
+      {
+        "type": "folder_exists",
+        "path": "{desktop}/Base-Spatiale/Cartes-Stellaires"
+      },
+      {
+        "type": "folder_exists",
+        "path": "{desktop}/Base-Spatiale/Journaux"
+      }
+    ]
+  },
+  "success_message": "Architecture parfaite ! La base de données est structurée comme un vrai ingénieur spatial !"
+}

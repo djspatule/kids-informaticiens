@@ -1,0 +1,23 @@
+{
+  "id": "mission_09",
+  "title": "🏆 Mission 9 — Victoire galactique !",
+  "description": "Commandant Oscar, c'est la mission finale !\n\nCrée un fichier 'victoire-finale.txt' dans ton dossier 'Base-Spatiale'.\n\nDans ce fichier, écris un message à Papa expliquant tout ce que tu as appris sur les ordinateurs aujourd'hui !\n\nMentionnes-y le mot 'COSMOS' quelque part — c'est le mot de passe galactique !",
+  "hint": "Base-Spatiale → clic droit → Créer fichier → 'victoire-finale.txt' → écris ton message avec le mot COSMOS",
+  "points": 35,
+  "check": {
+    "type": "all_of",
+    "checks": [
+      {
+        "type": "file_exists",
+        "path": "{desktop}/Base-Spatiale/victoire-finale.txt"
+      },
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Base-Spatiale/victoire-finale.txt",
+        "text": "cosmos",
+        "case_sensitive": false
+      }
+    ]
+  },
+  "success_message": "VICTOIRE GALACTIQUE ! Commandant Oscar, tu as maîtrisé tous les secrets de l'informatique spatiale !"
+}

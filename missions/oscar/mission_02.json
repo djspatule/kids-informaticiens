@@ -1,0 +1,14 @@
+{
+  "id": "mission_02",
+  "title": "📡 Mission 2 — Signal reçu",
+  "description": "Commandant Oscar ! Un signal venu de l'espace !\n\nDans ton dossier 'Base-Spatiale', crée un fichier 'signal.txt' et écris le message suivant exactement :\n\n'Signal reçu. Commandant Oscar en ligne.'\n\nCe message sera transmis à la station ISS !",
+  "hint": "Base-Spatiale → clic droit → Créer fichier → 'signal.txt' → ouvre-le et écris le message",
+  "points": 20,
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Base-Spatiale/signal.txt",
+    "text": "Commandant Oscar",
+    "case_sensitive": false
+  },
+  "success_message": "Signal transmis avec succès ! La station ISS a bien reçu ton message !"
+}

@@ -1,0 +1,16 @@
+{
+  "player": "oscar",
+  "display_name": "Oscar",
+  "profile": "medium",
+  "color_theme": "#80CBC4",
+  "role_title": "Commandant",
+  "missions_dir": "missions/oscar",
+  "first_mission": "mission_01",
+  "total_missions": 9,
+  "secret_code": "COSMOS-OSCAR-2026",
+  "home_dir": "/home/oscar",
+  "game_dir": "/home/oscar/game",
+  "desktop_dir_name": "Desktop",
+  "save_file": "/home/oscar/game/saves/state.json",
+  "log_file": "logs/oscar.log"
+}

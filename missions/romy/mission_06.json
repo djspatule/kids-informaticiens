@@ -1,0 +1,12 @@
+{
+  "id": "mission_06",
+  "title": "🔭 Mission 6 — Découverte astronomique",
+  "description": "Capitaine Romy, les télescopes ont détecté quelque chose !\n\nOuvre le gestionnaire de fichiers (l'explorateur) et explore ton ordinateur.\n\nEnsuite, crée un fichier 'decouverte.txt' dans ton dossier Documents (dans Mission-Spatiale) et écris le nom d'une planète que tu aimes !",
+  "hint": "Ouvre le gestionnaire de fichiers → navigue jusqu'à Mission-Spatiale/Documents → crée 'decouverte.txt' → écris le nom d'une planète",
+  "points": 20,
+  "check": {
+    "type": "file_exists",
+    "path": "{desktop}/Mission-Spatiale/Documents/decouverte.txt"
+  },
+  "success_message": "Découverte enregistrée ! Tu es une vraie astronome maintenant !"
+}

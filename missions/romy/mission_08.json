@@ -1,0 +1,23 @@
+{
+  "id": "mission_08",
+  "title": "🏆 Mission 8 — Défi final !",
+  "description": "Capitaine Romy, c'est ta dernière mission !\n\nCrée un fichier 'victoire.txt' dans ton dossier Mission-Spatiale et écris-y un message à Papa pour lui dire que tu as tout réussi !\n\nEcris quelque chose comme : 'Papa, j'ai tout réussi ! Je suis la meilleure Capitaine de la galaxie !'",
+  "hint": "Mission-Spatiale → clic droit → Créer un fichier → 'victoire.txt' → écris ton message de victoire !",
+  "points": 30,
+  "check": {
+    "type": "all_of",
+    "checks": [
+      {
+        "type": "file_exists",
+        "path": "{desktop}/Mission-Spatiale/victoire.txt"
+      },
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Mission-Spatiale/victoire.txt",
+        "text": "papa",
+        "case_sensitive": false
+      }
+    ]
+  },
+  "success_message": "BRAVO CAPITAINE ROMY ! Tu as accompli toutes les missions ! Tu es une héroïne de l'espace !"
+}
