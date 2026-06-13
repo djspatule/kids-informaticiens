@@ -6,11 +6,45 @@
   "role_title": "Commandant",
   "missions_dir": "missions/oscar",
   "first_mission": "mission_01",
-  "total_missions": 9,
-  "secret_code": "COSMOS-OSCAR-2026",
+  "total_missions": 34,
+  "secret_code": "QUASAR-OSCAR-2026",
   "home_dir": "/home/oscar",
   "game_dir": "/home/oscar/game",
   "desktop_dir_name": "Desktop",
   "save_file": "/home/oscar/game/saves/state.json",
-  "log_file": "logs/oscar.log"
+  "log_file": "logs/oscar.log",
+  "levels": [
+    {
+      "id": 1,
+      "name": "L'Exploration Informatique",
+      "missions_count": 9,
+      "reward": "COSMOS-OSCAR-2026",
+      "color": "#80CBC4",
+      "theme": "computer"
+    },
+    {
+      "id": 2,
+      "name": "Le Module Mathématique",
+      "missions_count": 9,
+      "reward": "NEBULA-OSCAR-2026",
+      "color": "#FFD700",
+      "theme": "math"
+    },
+    {
+      "id": 3,
+      "name": "Le Centre Communication",
+      "missions_count": 9,
+      "reward": "PULSAR-OSCAR-2026",
+      "color": "#CE93D8",
+      "theme": "language"
+    },
+    {
+      "id": 4,
+      "name": "Le Laboratoire Spatial",
+      "missions_count": 7,
+      "reward": "QUASAR-OSCAR-2026",
+      "color": "#FF8C42",
+      "theme": "science"
+    }
+  ]
 }

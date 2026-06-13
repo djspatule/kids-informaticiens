@@ -6,11 +6,45 @@
   "role_title": "Capitaine",
   "missions_dir": "missions/romy",
   "first_mission": "mission_01",
-  "total_missions": 8,
-  "secret_code": "ETOILE-ROMY-2026",
+  "total_missions": 30,
+  "secret_code": "UNIVERS-ROMY-2026",
   "home_dir": "/home/romy",
   "game_dir": "/home/romy/game",
   "desktop_dir_name": "Desktop",
   "save_file": "/home/romy/game/saves/state.json",
-  "log_file": "logs/romy.log"
+  "log_file": "logs/romy.log",
+  "levels": [
+    {
+      "id": 1,
+      "name": "L'Exploration Informatique",
+      "missions_count": 8,
+      "reward": "ETOILE-ROMY-2026",
+      "color": "#CE93D8",
+      "theme": "computer"
+    },
+    {
+      "id": 2,
+      "name": "La Station Mathématique",
+      "missions_count": 8,
+      "reward": "PLANETE-ROMY-2026",
+      "color": "#FFD700",
+      "theme": "math"
+    },
+    {
+      "id": 3,
+      "name": "Le Vaisseau du Langage",
+      "missions_count": 8,
+      "reward": "GALAXIE-ROMY-2026",
+      "color": "#80CBC4",
+      "theme": "language"
+    },
+    {
+      "id": 4,
+      "name": "La Planète des Sciences",
+      "missions_count": 6,
+      "reward": "UNIVERS-ROMY-2026",
+      "color": "#FF8C42",
+      "theme": "science"
+    }
+  ]
 }

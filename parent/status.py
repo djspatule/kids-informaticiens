@@ -182,6 +182,18 @@ def print_player_section(
     current_mission_data = missions.get(current_mission_id, {})
     current_title = current_mission_data.get("title", current_mission_id)
 
+    # Niveau actuel
+    current_level = state.get("current_level", 1)
+    level_rewards = state.get("level_rewards", {})
+    completed_levels = state.get("completed_levels", [])
+    levels_cfg = config.get("levels", [])
+    num_levels = len(levels_cfg) if levels_cfg else 4
+    current_level_name = ""
+    for lvl in levels_cfg:
+        if lvl.get("id") == current_level:
+            current_level_name = lvl.get("name", "")
+            break
+
     # Score
     score = state.get("score", 0)
     hints_used = state.get("hints_used", 0)
@@ -191,6 +203,19 @@ def print_player_section(
     bar = progress_bar(num_completed, total)
     print(f"  Mission actuelle  : {BOLD}{num_current}/{total}{RESET} — {current_title}")
     print(f"  Progression       : {color}{bar}{RESET} {num_completed}/{total} terminées")
+
+    # Niveau
+    level_label = f"{current_level} / {num_levels}"
+    if current_level_name:
+        level_label += f" — {current_level_name}"
+    print(f"  Niveau actuel     : {BOLD}{level_label}{RESET}")
+
+    # Récompenses de niveaux débloqués
+    if level_rewards:
+        for lvl_id_str, reward_code in sorted(level_rewards.items()):
+            print(f"  Codes débloqués   : {GREEN}{reward_code}{RESET} {DIM}(niveau {lvl_id_str}){RESET}")
+    elif completed_levels:
+        print(f"  Niveaux terminés  : {GREEN}{len(completed_levels)}{RESET} / {num_levels}")
 
     # Missions complétées
     if completed:
