@@ -1,0 +1,17 @@
+{
+  "id": "mission_16",
+  "level": 2,
+  "title": "📏 Mission 16 — Aire",
+  "description": "Même rectangle : 7cm × 3cm ! 📏\n\nCalcule son aire : A = 7 × 3 = ?\n\n📝 Dans 'Module-Mathematiques', crée un fichier 'aire.txt' et écris le résultat.",
+  "hint": "A = 7 × 3 = 21 cm². Écris '21' dans 'aire.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Module-Mathematiques/aire.txt",
+    "text": "21",
+    "case_sensitive": false
+  },
+  "success_message": "Exact ! A = 21 cm² ! Périmètre ET aire maîtrisés ! Tu es un géomètre de l'espace ! 📏🎉",
+  "next": "mission_17",
+  "points": 20,
+  "image": "assets/illustrations/oscar/oscar_l2_m16.png"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "mission_28",
+  "level": 4,
+  "title": "💧 Mission 28 — Le cycle de l'eau",
+  "description": "Regarde l'image du cycle de l'eau ! 💧☁️\n\nL'eau s'évapore pour former des ___ ?\n\n📝 Dans 'Planete-Sciences', crée un fichier 'cycle_eau.txt' et écris ta réponse.",
+  "hint": "Quand l'eau se réchauffe, elle monte dans le ciel et forme des... NUAGES ! Écris 'nuages' dans 'cycle_eau.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Planete-Sciences/cycle_eau.txt",
+    "text": "nuage",
+    "case_sensitive": false
+  },
+  "success_message": "Bravo ! L'eau s'évapore et forme des NUAGES ! Tu comprends le cycle de l'eau ! 💧☁️🌧️",
+  "next": "mission_29",
+  "points": 15,
+  "image": "assets/illustrations/romy/romy_l4_m28.png"
+}

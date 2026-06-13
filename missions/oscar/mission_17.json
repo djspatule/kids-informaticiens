@@ -1,0 +1,17 @@
+{
+  "id": "mission_17",
+  "level": 2,
+  "title": "9️⃣ Mission 17 — Table de 9",
+  "description": "La table de 9, c'est la plus puissante ! 9️⃣\n\n9 × 7 = ?\n\nCalcule et écris le résultat.\n\n📝 Dans 'Module-Mathematiques', crée un fichier 'table9.txt' et écris ta réponse.",
+  "hint": "9 × 7 : tu peux compter (9, 18, 27, 36, 45, 54, 63) ou calculer (10×7=70, -7=63). Écris '63' dans 'table9.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Module-Mathematiques/table9.txt",
+    "text": "63",
+    "case_sensitive": false
+  },
+  "success_message": "Formidable ! 9 × 7 = 63 ! La table de 9 n'a plus de secrets pour toi ! 9️⃣🚀",
+  "next": "mission_18",
+  "points": 10,
+  "image": "assets/illustrations/oscar/oscar_l2_m17.png"
+}

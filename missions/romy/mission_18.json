@@ -1,0 +1,17 @@
+{
+  "id": "mission_18",
+  "level": 3,
+  "title": "📝 Mission 18 — Conjugaison 'être'",
+  "description": "Regarde l'image : 'Je ___ Capitaine.' 🌟\n\nQuel est le bon mot ? C'est le verbe 'être' au présent !\n\n📝 Dans 'Vaisseau-Langage', crée un fichier 'etre.txt' et écris le bon mot.",
+  "hint": "Je ___ : suis, es, est ? Pour 'je', on dit 'Je SUIS'. Écris 'suis' dans 'etre.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Vaisseau-Langage/etre.txt",
+    "text": "suis",
+    "case_sensitive": false
+  },
+  "success_message": "Bravo ! 'Je SUIS Capitaine !' Tu conjugues comme une pro ! 🌟📝",
+  "next": "mission_19",
+  "points": 15,
+  "image": "assets/illustrations/romy/romy_l3_m18.png"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "mission_18",
+  "level": 2,
+  "title": "🍊 Mission 18 — Fraction d'une quantité",
+  "description": "Regarde l'image : 24 oranges dans la soute spatiale ! 🍊\n\n1/3 de 24 = ?\n\nCalcule et écris le résultat.\n\n📝 Dans 'Module-Mathematiques', crée un fichier 'fraction_quantite.txt' et écris ta réponse.",
+  "hint": "1/3 de 24 = 24 ÷ 3 = 8. Écris '8' dans 'fraction_quantite.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Module-Mathematiques/fraction_quantite.txt",
+    "text": "8",
+    "case_sensitive": false
+  },
+  "success_message": "BRILLANT ! 1/3 de 24 = 8 ! Niveau 2 terminé ! Tu es un mathématicien galactique ! 🏆🧮🚀",
+  "next": "mission_19",
+  "points": 25,
+  "image": "assets/illustrations/oscar/oscar_l2_m18.png"
+}

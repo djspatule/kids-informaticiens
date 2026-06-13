@@ -1,0 +1,17 @@
+{
+  "id": "mission_11",
+  "level": 2,
+  "title": "🚀 Mission 11 — Addition spatiale",
+  "description": "Regarde l'image : 14 fusées + 23 fusées = ? 🚀\n\nFais l'addition et écris le résultat.\n\n📝 Dans 'Station-Maths', crée un fichier 'addition.txt' et écris ta réponse.",
+  "hint": "14 + 23 = ? Compte ou calcule sur papier, puis écris le résultat dans 'addition.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Station-Maths/addition.txt",
+    "text": "37",
+    "case_sensitive": false
+  },
+  "success_message": "Super calcul ! 14 + 23 = 37 ! Tu es championne des additions ! 🏆🚀",
+  "next": "mission_12",
+  "points": 10,
+  "image": "assets/illustrations/romy/romy_l2_m11.png"
+}

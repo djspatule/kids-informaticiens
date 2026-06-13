@@ -1,0 +1,26 @@
+{
+  "id": "mission_30",
+  "level": 4,
+  "title": "🏆 Mission 30 — Diplôme de Capitaine",
+  "description": "C'est ta DERNIÈRE MISSION, Capitaine Romy ! 🏆\n\nTu as tout accompli ! Reçois ton diplôme de Capitaine !\n\n📝 Dans 'Planete-Sciences', crée un fichier 'diplome.txt' et écris : 'Capitaine Romy'",
+  "hint": "Planete-Sciences → clic droit → créer 'diplome.txt' → écris exactement 'Capitaine Romy' dedans.",
+  "check": {
+    "type": "all_of",
+    "checks": [
+      {
+        "type": "file_exists",
+        "path": "{desktop}/Planete-Sciences/diplome.txt"
+      },
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Planete-Sciences/diplome.txt",
+        "text": "Romy",
+        "case_sensitive": false
+      }
+    ]
+  },
+  "success_message": "BRAVO CAPITAINE ROMY! Tu as terminé TOUTES les missions! Tu es une vraie exploratrice de l'espace! 🏆⭐🚀",
+  "next": null,
+  "points": 35,
+  "image": "assets/illustrations/romy/romy_l4_m30.png"
+}

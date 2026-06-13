@@ -1,0 +1,28 @@
+{
+  "id": "mission_26",
+  "level": 3,
+  "title": "👨‍👩‍👦 Mission 26 — English : Ma famille",
+  "description": "En anglais, découvrons la famille ! 👨‍👩‍👦\n\nDans 'Centre-Communication', crée un dossier 'My-Family'.\nDedans, crée 2 fichiers : 'mother.txt' et 'father.txt'.\n\n📁 Centre-Communication → créer 'My-Family' → créer les 2 fichiers dedans.",
+  "hint": "Centre-Communication → clic droit → créer dossier 'My-Family'. Ouvre le dossier et crée 'mother.txt' et 'father.txt'.",
+  "check": {
+    "type": "all_of",
+    "checks": [
+      {
+        "type": "folder_exists",
+        "path": "{desktop}/Centre-Communication/My-Family"
+      },
+      {
+        "type": "file_exists",
+        "path": "{desktop}/Centre-Communication/My-Family/mother.txt"
+      },
+      {
+        "type": "file_exists",
+        "path": "{desktop}/Centre-Communication/My-Family/father.txt"
+      }
+    ]
+  },
+  "success_message": "Well done! Mother = maman, Father = papa ! Ta famille anglophone est dans la base ! 👨‍👩‍👦🇬🇧🎉",
+  "next": "mission_27",
+  "points": 15,
+  "image": "assets/illustrations/oscar/oscar_l3_m26.png"
+}

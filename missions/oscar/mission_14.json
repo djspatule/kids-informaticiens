@@ -1,0 +1,28 @@
+{
+  "id": "mission_14",
+  "level": 2,
+  "title": "🔢 Mission 14 — Décimaux",
+  "description": "Les nombres décimaux dans l'espace ! 🔢🚀\n\n2,5 + 1,3 = ?\n\nAdditionne ces nombres décimaux et écris le résultat.\n\n📝 Dans 'Module-Mathematiques', crée un fichier 'decimaux.txt' et écris ta réponse.",
+  "hint": "2,5 + 1,3 : les unités 2+1=3, les dixièmes 5+3=8. Résultat = 3,8. Écris '3,8' dans 'decimaux.txt'.",
+  "check": {
+    "type": "any_of",
+    "checks": [
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Module-Mathematiques/decimaux.txt",
+        "text": "3,8",
+        "case_sensitive": false
+      },
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Module-Mathematiques/decimaux.txt",
+        "text": "3.8",
+        "case_sensitive": false
+      }
+    ]
+  },
+  "success_message": "Précis au dixième ! 2,5 + 1,3 = 3,8 ! Les décimaux sont vaincus ! 🔢🏆",
+  "next": "mission_15",
+  "points": 15,
+  "image": "assets/illustrations/oscar/oscar_l2_m14.png"
+}

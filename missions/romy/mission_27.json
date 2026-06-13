@@ -1,0 +1,28 @@
+{
+  "id": "mission_27",
+  "level": 4,
+  "title": "🦁 Mission 27 — Les animaux",
+  "description": "Les animaux aussi sont dans l'espace ! 🦁🐰🦊\n\nDans 'Planete-Sciences', crée 3 dossiers :\n• 'Carnivores' (mangent de la viande)\n• 'Herbivores' (mangent des plantes)\n• 'Omnivores' (mangent les deux !)",
+  "hint": "Planete-Sciences → clic droit → créer 'Carnivores'. Recommence pour 'Herbivores' et 'Omnivores'.",
+  "check": {
+    "type": "all_of",
+    "checks": [
+      {
+        "type": "folder_exists",
+        "path": "{desktop}/Planete-Sciences/Carnivores"
+      },
+      {
+        "type": "folder_exists",
+        "path": "{desktop}/Planete-Sciences/Herbivores"
+      },
+      {
+        "type": "folder_exists",
+        "path": "{desktop}/Planete-Sciences/Omnivores"
+      }
+    ]
+  },
+  "success_message": "Super scientifique ! Tu connais les 3 groupes d'animaux ! 🦁🐰🦊✨",
+  "next": "mission_28",
+  "points": 20,
+  "image": "assets/illustrations/romy/romy_l4_m27.png"
+}

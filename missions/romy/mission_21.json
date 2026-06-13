@@ -1,0 +1,17 @@
+{
+  "id": "mission_21",
+  "level": 3,
+  "title": "🔤 Mission 21 — Les syllabes",
+  "description": "Regarde l'image : ca-pi-tai-ne 🔤\n\nCombien de syllabes a le mot 'capitaine' ?\nCompte les parties en frappant dans les mains !\n\n📝 Dans 'Vaisseau-Langage', crée un fichier 'syllabes.txt' et écris le nombre.",
+  "hint": "Ca-pi-tai-ne : tape dans tes mains à chaque partie. Ca (1) - pi (2) - tai (3) - ne (4). Écris le chiffre dans 'syllabes.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Vaisseau-Langage/syllabes.txt",
+    "text": "4",
+    "case_sensitive": false
+  },
+  "success_message": "Ca-pi-tai-ne = 4 syllabes ! Tu es une experte des syllabes ! 🔤👏",
+  "next": "mission_22",
+  "points": 10,
+  "image": "assets/illustrations/romy/romy_l3_m21.png"
+}

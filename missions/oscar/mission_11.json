@@ -1,0 +1,17 @@
+{
+  "id": "mission_11",
+  "level": 2,
+  "title": "✖️ Mission 11 — Multiplication",
+  "description": "Calcule cette multiplication posée ! 🚀\n\n47 × 8 = ?\n\nFais le calcul sur papier, puis écris le résultat.\n\n📝 Dans 'Module-Mathematiques', crée un fichier 'multiplication.txt' et écris ta réponse.",
+  "hint": "47 × 8 : 8×7=56 (je pose 6, retiens 5) ; 8×4=32, +5=37. Résultat = 376. Écris '376' dans 'multiplication.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Module-Mathematiques/multiplication.txt",
+    "text": "376",
+    "case_sensitive": false
+  },
+  "success_message": "Excellent calcul ! 47 × 8 = 376 ! Tu maîtrises la multiplication posée ! 🏆✖️",
+  "next": "mission_12",
+  "points": 15,
+  "image": "assets/illustrations/oscar/oscar_l2_m11.png"
+}

@@ -1,5 +1,6 @@
 {
   "id": "mission_05",
+  "level": 1,
   "title": "📂 Mission 5 — Organisation de la base",
   "description": "La base spatiale est en désordre ! Il faut organiser.\n\nDans ton dossier 'Mission-Spatiale', crée deux sous-dossiers :\n• 'Documents'\n• 'Images'\n\nPuis déplace ton fichier 'journal-de-bord.txt' dans le dossier 'Documents'.",
   "hint": "Dans Mission-Spatiale : clic droit → Créer un dossier → fais ça deux fois. Ensuite glisse le fichier dans 'Documents'.",

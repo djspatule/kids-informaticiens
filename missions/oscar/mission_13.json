@@ -1,0 +1,17 @@
+{
+  "id": "mission_13",
+  "level": 2,
+  "title": "🍕 Mission 13 — Fractions",
+  "description": "Regarde l'image : une pizza coupée en 4 parts, 3 parts sont colorées ! 🍕\n\nQuelle fraction de la pizza est coloriée ?\n\n📝 Dans 'Module-Mathematiques', crée un fichier 'fraction.txt' et écris la fraction (ex: 1/2).",
+  "hint": "La pizza a 4 parts, 3 sont colorées. On écrit : 3/4 (trois quarts). Écris '3/4' dans 'fraction.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Module-Mathematiques/fraction.txt",
+    "text": "3/4",
+    "case_sensitive": false
+  },
+  "success_message": "Délicieux ! 3/4 de la pizza ! Tu comprends les fractions comme un chef ! 🍕🧮✨",
+  "next": "mission_14",
+  "points": 15,
+  "image": "assets/illustrations/oscar/oscar_l2_m13.png"
+}

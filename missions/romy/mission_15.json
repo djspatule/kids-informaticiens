@@ -1,0 +1,32 @@
+{
+  "id": "mission_15",
+  "level": 2,
+  "title": "🔷 Mission 15 — Les formes géométriques",
+  "description": "Les formes géométriques arrivent dans la station ! 🔷\n\nCrée un dossier 'Formes' dans 'Station-Maths'.\nDedans, crée 3 fichiers : 'carre.txt', 'triangle.txt', 'cercle.txt'.\n\n📁 Station-Maths → créer dossier 'Formes' → créer les 3 fichiers dedans.",
+  "hint": "Station-Maths → clic droit → créer dossier 'Formes'. Puis ouvre Formes et crée les 3 fichiers texte.",
+  "check": {
+    "type": "all_of",
+    "checks": [
+      {
+        "type": "folder_exists",
+        "path": "{desktop}/Station-Maths/Formes"
+      },
+      {
+        "type": "file_exists",
+        "path": "{desktop}/Station-Maths/Formes/carre.txt"
+      },
+      {
+        "type": "file_exists",
+        "path": "{desktop}/Station-Maths/Formes/triangle.txt"
+      },
+      {
+        "type": "file_exists",
+        "path": "{desktop}/Station-Maths/Formes/cercle.txt"
+      }
+    ]
+  },
+  "success_message": "Bravo ! Tu connais le carré, le triangle et le cercle ! Géométrie maîtrisée ! 🔷🔺⭕",
+  "next": "mission_16",
+  "points": 20,
+  "image": "assets/illustrations/romy/romy_l2_m15.png"
+}

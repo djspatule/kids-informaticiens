@@ -1,0 +1,28 @@
+{
+  "id": "mission_29",
+  "level": 4,
+  "title": "🌱 Mission 29 — Photosynthèse",
+  "description": "Regarde l'image : une plante sous le Soleil ! 🌱☀️\n\nLes plantes absorbent la ___ du soleil pour fabriquer leur nourriture.\n\n📝 Dans 'Laboratoire-Spatial', crée un fichier 'photosynthese.txt' et écris ta réponse.",
+  "hint": "Les plantes absorbent la LUMIÈRE du soleil. Écris 'lumiere' (ou 'lumière') dans 'photosynthese.txt'.",
+  "check": {
+    "type": "any_of",
+    "checks": [
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Laboratoire-Spatial/photosynthese.txt",
+        "text": "lumière",
+        "case_sensitive": false
+      },
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Laboratoire-Spatial/photosynthese.txt",
+        "text": "lumiere",
+        "case_sensitive": false
+      }
+    ]
+  },
+  "success_message": "Excellent scientifique ! Les plantes captent la LUMIÈRE ! Tu comprends la photosynthèse ! 🌱☀️🔬",
+  "next": "mission_30",
+  "points": 15,
+  "image": "assets/illustrations/oscar/oscar_l4_m29.png"
+}

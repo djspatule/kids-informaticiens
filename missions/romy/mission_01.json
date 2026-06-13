@@ -1,5 +1,6 @@
 {
   "id": "mission_01",
+  "level": 1,
   "title": "🌟 Mission 1 — Premier contact",
   "description": "Bienvenue, Capitaine Romy !\n\nLa station spatiale a besoin de toi. Ta première mission est de créer un dossier secret sur ton Bureau.\n\nCrée un dossier appelé 'Mission-Spatiale' sur ton Bureau.\n\n📁 Bureau → clic droit → Créer un dossier → 'Mission-Spatiale'",
   "hint": "Fais un clic droit sur le Bureau (là où il n'y a rien), puis choisis 'Créer un dossier'.",

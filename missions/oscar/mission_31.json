@@ -1,0 +1,17 @@
+{
+  "id": "mission_31",
+  "level": 4,
+  "title": "🦊 Mission 31 — Chaîne alimentaire",
+  "description": "Regarde l'image de la chaîne alimentaire ! 🦊\n\nSoleil → herbe → lapin → renard\n\nQue mange le renard ?\n\n📝 Dans 'Laboratoire-Spatial', crée un fichier 'chaine.txt' et écris ta réponse.",
+  "hint": "Dans la chaîne : lapin → renard. Le renard mange le LAPIN. Écris 'lapin' dans 'chaine.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Laboratoire-Spatial/chaine.txt",
+    "text": "lapin",
+    "case_sensitive": false
+  },
+  "success_message": "Exact ! Le renard mange le LAPIN ! Tu maîtrises les chaînes alimentaires ! 🦊🐰🌱",
+  "next": "mission_32",
+  "points": 15,
+  "image": "assets/illustrations/oscar/oscar_l4_m31.png"
+}

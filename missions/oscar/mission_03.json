@@ -1,5 +1,6 @@
 {
   "id": "mission_03",
+  "level": 1,
   "title": "🗂️ Mission 3 — Architecture des données",
   "description": "Excellente communication, Commandant !\n\nMaintenant organisez la base. Dans 'Base-Spatiale', crée ces 3 dossiers :\n• 'Rapports'\n• 'Cartes-Stellaires'\n• 'Journaux'",
   "hint": "Dans Base-Spatiale : 3 fois clic droit → Créer un dossier, avec chacun des noms indiqués",

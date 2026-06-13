@@ -1,5 +1,6 @@
 {
   "id": "mission_06",
+  "level": 1,
   "title": "🔄 Mission 6 — Opération transfert",
   "description": "Mission de sécurité, Commandant !\n\nLe fichier 'signal.txt' doit être transféré dans le dossier 'Journaux' pour archivage.\n\nDéplace 'signal.txt' depuis 'Base-Spatiale' vers 'Base-Spatiale/Journaux/'.\n\n(Glisser-déposer, ou couper/coller)",
   "hint": "Clic droit sur signal.txt → Couper → ouvre le dossier Journaux → clic droit → Coller",

@@ -1,5 +1,6 @@
 {
   "id": "mission_07",
+  "level": 1,
   "title": "🗺️ Mission 7 — Carte des étoiles",
   "description": "Commandant Oscar, les astronomes ont besoin d'aide !\n\nCrée un fichier 'etoiles-preferees.txt' dans le dossier 'Cartes-Stellaires'.\n\nDans ce fichier, écris les noms de 3 étoiles ou constellations que tu connais (ou invente des noms galactiques !)",
   "hint": "Base-Spatiale → Cartes-Stellaires → clic droit → Créer fichier → 'etoiles-preferees.txt'",

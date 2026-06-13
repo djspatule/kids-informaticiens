@@ -1,0 +1,17 @@
+{
+  "id": "mission_33",
+  "level": 4,
+  "title": "🔲 Mission 33 — Symétrie",
+  "description": "Regarde l'image : un carré parfait ! 🔲\n\nCombien d'axes de symétrie a un carré ?\n(Un axe de symétrie partage la forme en deux parties identiques)\n\n📝 Dans 'Laboratoire-Spatial', crée un fichier 'symetrie.txt' et écris le nombre.",
+  "hint": "Un carré a 4 axes de symétrie : 2 diagonales et 2 médianes. Écris '4' dans 'symetrie.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Laboratoire-Spatial/symetrie.txt",
+    "text": "4",
+    "case_sensitive": false
+  },
+  "success_message": "Géométrie parfaite ! Un carré a 4 axes de symétrie ! Tu es un géomètre galactique ! 🔲📐✨",
+  "next": "mission_34",
+  "points": 15,
+  "image": "assets/illustrations/oscar/oscar_l4_m33.png"
+}

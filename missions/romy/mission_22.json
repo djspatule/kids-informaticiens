@@ -1,0 +1,17 @@
+{
+  "id": "mission_22",
+  "level": 3,
+  "title": "🎨 Mission 22 — English : Les couleurs",
+  "description": "C'est l'heure de l'anglais ! 🇬🇧🎨\n\nRegarde l'image : une planète rouge ! 🔴\n\nComment dit-on 'rouge' en anglais ?\n\n📝 Dans 'Vaisseau-Langage', crée un fichier 'couleur.txt' et écris la réponse en anglais.",
+  "hint": "Rouge en anglais = RED. Écris 'red' dans le fichier 'couleur.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Vaisseau-Langage/couleur.txt",
+    "text": "red",
+    "case_sensitive": false
+  },
+  "success_message": "Red = rouge ! Well done ! Tu parles anglais comme une astronaute ! 🇬🇧🎨🌟",
+  "next": "mission_23",
+  "points": 10,
+  "image": "assets/illustrations/romy/romy_l3_m22.png"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "mission_23",
+  "level": 3,
+  "title": "🔮 Mission 23 — Futur simple",
+  "description": "Regarde l'image : 'Demain, nous ___ (être) dans l'espace.' 🔮🚀\n\nConjugue le verbe être au futur simple !\n\n📝 Dans 'Centre-Communication', crée un fichier 'futur.txt' et écris la bonne forme.",
+  "hint": "Futur de 'être' pour 'nous' : nous serons. Écris 'serons' dans 'futur.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Centre-Communication/futur.txt",
+    "text": "serons",
+    "case_sensitive": false
+  },
+  "success_message": "Nous SERONS dans l'espace ! Le futur simple est maîtrisé ! 🔮🚀✨",
+  "next": "mission_24",
+  "points": 15,
+  "image": "assets/illustrations/oscar/oscar_l3_m23.png"
+}

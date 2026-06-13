@@ -1,0 +1,28 @@
+{
+  "id": "mission_21",
+  "level": 3,
+  "title": "📚 Mission 21 — Classes de mots",
+  "description": "Les mots ont des classes ! Noms, Verbes, Adjectifs ! 📚\n\nDans 'Centre-Communication', crée 3 dossiers : 'Noms', 'Verbes', 'Adjectifs'.\nDans 'Noms' : crée 'astronaute.txt'.\nDans 'Verbes' : crée 'voler.txt'.\nDans 'Adjectifs' : crée 'spatial.txt'.",
+  "hint": "Centre-Communication → créer 3 dossiers. Puis dans chaque dossier, créer le bon fichier texte.",
+  "check": {
+    "type": "all_of",
+    "checks": [
+      {
+        "type": "folder_exists",
+        "path": "{desktop}/Centre-Communication/Noms"
+      },
+      {
+        "type": "file_exists",
+        "path": "{desktop}/Centre-Communication/Verbes/voler.txt"
+      },
+      {
+        "type": "file_exists",
+        "path": "{desktop}/Centre-Communication/Adjectifs/spatial.txt"
+      }
+    ]
+  },
+  "success_message": "Excellent ! Astronaute=nom, voler=verbe, spatial=adjectif ! Tu maîtrises les classes de mots ! 📚🚀✨",
+  "next": "mission_22",
+  "points": 20,
+  "image": "assets/illustrations/oscar/oscar_l3_m21.png"
+}

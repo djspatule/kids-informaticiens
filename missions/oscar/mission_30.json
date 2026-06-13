@@ -1,0 +1,32 @@
+{
+  "id": "mission_30",
+  "level": 4,
+  "title": "🧊 Mission 30 — États de la matière",
+  "description": "La matière existe sous 3 états ! 🧊💧💨\n\nDans 'Laboratoire-Spatial', crée un dossier 'Etats-Matiere'.\nDedans, crée 3 dossiers : 'Solide', 'Liquide', 'Gazeux'.\n\n📁 Laboratoire-Spatial → créer 'Etats-Matiere' → créer les 3 dossiers dedans.",
+  "hint": "Laboratoire-Spatial → créer 'Etats-Matiere'. Ouvre ce dossier, puis crée 'Solide', 'Liquide' et 'Gazeux' dedans.",
+  "check": {
+    "type": "all_of",
+    "checks": [
+      {
+        "type": "folder_exists",
+        "path": "{desktop}/Laboratoire-Spatial/Etats-Matiere"
+      },
+      {
+        "type": "folder_exists",
+        "path": "{desktop}/Laboratoire-Spatial/Etats-Matiere/Solide"
+      },
+      {
+        "type": "folder_exists",
+        "path": "{desktop}/Laboratoire-Spatial/Etats-Matiere/Liquide"
+      },
+      {
+        "type": "folder_exists",
+        "path": "{desktop}/Laboratoire-Spatial/Etats-Matiere/Gazeux"
+      }
+    ]
+  },
+  "success_message": "Parfait ! Solide, Liquide, Gazeux — les 3 états de la matière classifiés ! 🧊💧💨🔬",
+  "next": "mission_31",
+  "points": 20,
+  "image": "assets/illustrations/oscar/oscar_l4_m30.png"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "mission_24",
+  "level": 3,
+  "title": "💬 Mission 24 — Synonymes",
+  "description": "Un synonyme est un mot qui veut dire la même chose ! 💬\n\nTrouve un synonyme du mot 'grand' dans l'espace.\n\n📝 Dans 'Centre-Communication', crée un fichier 'synonyme.txt' et écris ton synonyme.",
+  "hint": "Synonymes de 'grand' : immense, gigantesque, énorme, vaste, colossal. Choisis-en un et écris-le dans 'synonyme.txt'.",
+  "check": {
+    "type": "any_of",
+    "checks": [
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Centre-Communication/synonyme.txt",
+        "text": "immense",
+        "case_sensitive": false
+      },
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Centre-Communication/synonyme.txt",
+        "text": "gigantesque",
+        "case_sensitive": false
+      },
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Centre-Communication/synonyme.txt",
+        "text": "énorme",
+        "case_sensitive": false
+      },
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Centre-Communication/synonyme.txt",
+        "text": "vaste",
+        "case_sensitive": false
+      },
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Centre-Communication/synonyme.txt",
+        "text": "colossal",
+        "case_sensitive": false
+      }
+    ]
+  },
+  "success_message": "Magnifique synonyme ! L'univers est IMMENSE... ou GIGANTESQUE ! Tu enrichis ton vocabulaire ! 💬🌟",
+  "next": "mission_25",
+  "points": 15,
+  "image": "assets/illustrations/oscar/oscar_l3_m24.png"
+}

@@ -1,5 +1,6 @@
 {
   "id": "mission_07",
+  "level": 1,
   "title": "✨ Mission 7 — Renommage secret",
   "description": "Attention, Capitaine ! Message codé reçu.\n\nTon fichier 'rapport-mission.txt' doit être renommé en 'rapport-final.txt' pour des raisons de sécurité galactique !\n\nComment renommer :\n1. Clic droit sur 'rapport-mission.txt'\n2. Choisir 'Renommer'\n3. Taper 'rapport-final.txt'\n4. Appuyer sur Entrée",
   "hint": "Clic droit sur le fichier 'rapport-mission.txt' sur le Bureau → Renommer → tape 'rapport-final.txt'",

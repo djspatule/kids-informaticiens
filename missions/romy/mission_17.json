@@ -1,0 +1,15 @@
+{
+  "id": "mission_17",
+  "level": 3,
+  "title": "🚀 Mission 17 — Crée ton Vaisseau",
+  "description": "Bienvenue au Niveau 3, Capitaine Romy ! 🚀\n\nC'est le Vaisseau du Langage ! Tu vas apprendre le français et l'anglais.\n\nD'abord, crée un dossier 'Vaisseau-Langage' sur ton Bureau.\n\n📁 Bureau → clic droit → Créer un dossier → 'Vaisseau-Langage'",
+  "hint": "Clic droit sur le Bureau → 'Créer un dossier' → tape exactement 'Vaisseau-Langage'.",
+  "check": {
+    "type": "folder_exists",
+    "path": "{desktop}/Vaisseau-Langage"
+  },
+  "success_message": "Le Vaisseau du Langage est prêt au décollage ! Cap sur les mots ! 🚀📚",
+  "next": "mission_18",
+  "points": 10,
+  "image": "assets/illustrations/romy/romy_l3_m17.png"
+}

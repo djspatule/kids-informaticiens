@@ -1,0 +1,32 @@
+{
+  "id": "mission_20",
+  "level": 3,
+  "title": "🌙 Mission 20 — Masculin et Féminin",
+  "description": "Le Soleil est masculin, la Lune est féminine ! 🌞🌙\n\nDans 'Vaisseau-Langage', crée 2 dossiers : 'Masculin' et 'Féminin'.\nDans 'Masculin', crée le fichier 'le_soleil.txt'.\nDans 'Féminin', crée le fichier 'la_lune.txt'.",
+  "hint": "Vaisseau-Langage → clic droit → créer 'Masculin', puis créer 'Féminin'. Ouvre chaque dossier et crée le bon fichier dedans.",
+  "check": {
+    "type": "all_of",
+    "checks": [
+      {
+        "type": "folder_exists",
+        "path": "{desktop}/Vaisseau-Langage/Masculin"
+      },
+      {
+        "type": "folder_exists",
+        "path": "{desktop}/Vaisseau-Langage/Féminin"
+      },
+      {
+        "type": "file_exists",
+        "path": "{desktop}/Vaisseau-Langage/Masculin/le_soleil.txt"
+      },
+      {
+        "type": "file_exists",
+        "path": "{desktop}/Vaisseau-Langage/Féminin/la_lune.txt"
+      }
+    ]
+  },
+  "success_message": "Parfait ! Le soleil est masculin, la lune est féminine ! Tu maîtrises le genre ! 🌞🌙✨",
+  "next": "mission_21",
+  "points": 20,
+  "image": "assets/illustrations/romy/romy_l3_m20.png"
+}

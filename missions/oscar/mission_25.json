@@ -1,0 +1,28 @@
+{
+  "id": "mission_25",
+  "level": 3,
+  "title": "🇬🇧 Mission 25 — English : I like",
+  "description": "C'est l'heure de l'anglais, Commandant ! 🇬🇧\n\nÉcris en anglais : 'J'aime le football'\n\n📝 Dans 'Centre-Communication', crée un fichier 'english_sport.txt' et écris la phrase en anglais.",
+  "hint": "J'aime = I like. Le football = football. Écris 'I like football' dans 'english_sport.txt'.",
+  "check": {
+    "type": "all_of",
+    "checks": [
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Centre-Communication/english_sport.txt",
+        "text": "I like",
+        "case_sensitive": false
+      },
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Centre-Communication/english_sport.txt",
+        "text": "football",
+        "case_sensitive": false
+      }
+    ]
+  },
+  "success_message": "Great! 'I like football!' Tu parles anglais comme un astronaute international ! 🇬🇧⚽🌟",
+  "next": "mission_26",
+  "points": 10,
+  "image": "assets/illustrations/oscar/oscar_l3_m25.png"
+}

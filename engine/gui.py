@@ -22,6 +22,7 @@ import random
 import tkinter as tk
 import traceback
 from datetime import datetime, timezone
+from pathlib import Path
 from tkinter import font as tkfont
 from tkinter import messagebox
 from typing import Optional
@@ -113,6 +114,14 @@ class MissionWindow(tk.Tk):
         self._idle_job: Optional[str] = None
         self._pulse_job: Optional[str] = None
         self._parent_mode: bool  = False
+        self._current_photo      = None  # keeps PIL PhotoImage alive
+
+        # -- PIL availability (for mission images) --
+        try:
+            from PIL import Image as PILImage, ImageTk
+            self._pil_available = True
+        except ImportError:
+            self._pil_available = False
 
         # -- per-player theme --
         self.theme_color = config.get("color_theme", "#CE93D8")
@@ -328,6 +337,10 @@ class MissionWindow(tk.Tk):
         panel.pack(fill="both", expand=True, padx=8, pady=(8, 4))
         self._mission_panel = panel
 
+        # Image panel (above title; hidden until a mission provides an image)
+        self._img_label = tk.Label(panel, bg=BG_PANEL2, bd=0, highlightthickness=0)
+        # Not packed here — _update_mission_image() packs it when an image is available
+
         # Mission title
         self.lbl_mission_title = tk.Label(
             panel,
@@ -481,6 +494,7 @@ class MissionWindow(tk.Tk):
         completed = self.state.get("completed", [])
         n_done    = len(completed)
         total     = self.total_missions
+        level     = self.state.get("current_level", 1)
 
         stars_str = ""
         for i in range(total):
@@ -491,7 +505,7 @@ class MissionWindow(tk.Tk):
 
         self.lbl_stars.config(text=stars_str)
         self.lbl_counter.config(
-            text=f"Mission {min(n_done + 1, total)} sur {total}"
+            text=f"Niv. {level}  •  Mission {min(n_done + 1, total)} / {total}"
         )
 
         # Score label (may lag behind during count-up animation)
@@ -510,6 +524,7 @@ class MissionWindow(tk.Tk):
         title = self.current_mission.get("title", mission_id)
         desc  = self.current_mission.get("description", "")
 
+        self._update_mission_image(self.current_mission)
         self.lbl_mission_title.config(text=title)
 
         # Update scrollable text
@@ -521,6 +536,108 @@ class MissionWindow(tk.Tk):
         # Update hint (if visible)
         if self.hint_visible:
             self._show_hint_text()
+
+    def _update_mission_image(self, mission: dict) -> None:
+        """Load and display the mission image, or hide the panel if none."""
+        image_rel = mission.get("image", "")
+        if not image_rel or not self._pil_available:
+            self._img_label.config(image="")
+            self._img_label.pack_forget()
+            return
+
+        source_dir = Path(__file__).parent.parent
+        image_path = source_dir / image_rel
+
+        if not image_path.exists():
+            self._img_label.config(image="")
+            self._img_label.pack_forget()
+            return
+
+        try:
+            from PIL import Image as PILImage, ImageTk
+            img = PILImage.open(image_path).resize((460, 200))
+            self._current_photo = ImageTk.PhotoImage(img)
+            self._img_label.config(image=self._current_photo)
+            self._img_label.pack(fill="x", pady=(0, 4), before=self.lbl_mission_title)
+        except Exception as e:
+            logger.warning("Could not load mission image %s: %s", image_path, e)
+            self._img_label.pack_forget()
+
+    def _show_level_complete(self, level_id: int, level_name: str, reward_code: str) -> None:
+        """Show a celebratory modal window when a level is completed."""
+        win = tk.Toplevel(self)
+        win.title(f"Niveau {level_id} terminé !")
+        win.configure(bg=BG_DEEP)
+        win.resizable(False, False)
+        win.attributes("-topmost", True)
+        win.geometry("420x340")
+
+        # Centre over parent
+        self.update_idletasks()
+        px = self.winfo_x() + (self.WIN_W - 420) // 2
+        py = self.winfo_y() + (self.WIN_H - 340) // 2
+        win.geometry(f"420x340+{px}+{py}")
+
+        # Heading
+        tk.Label(
+            win,
+            text=f"⭐ NIVEAU {level_id} TERMINÉ ! ⭐",
+            bg=BG_DEEP,
+            fg=GOLD,
+            font=tkfont.Font(family="DejaVu Sans", size=17, weight="bold"),
+        ).pack(pady=(24, 4))
+
+        # Level name
+        tk.Label(
+            win,
+            text=level_name,
+            bg=BG_DEEP,
+            fg=self.theme_color,
+            font=tkfont.Font(family="DejaVu Sans", size=13, weight="bold"),
+        ).pack(pady=(0, 16))
+
+        # Separator
+        tk.Frame(win, bg=GOLD, height=1).pack(fill="x", padx=40, pady=(0, 16))
+
+        # Reward code label
+        tk.Label(
+            win,
+            text="Ton code de niveau est :",
+            bg=BG_DEEP,
+            fg=TEXT_WHITE,
+            font=tkfont.Font(family="DejaVu Sans", size=12),
+        ).pack()
+
+        # Code box
+        code_frame = tk.Frame(win, bg="#1A1500", bd=2, relief="flat",
+                              highlightbackground=GOLD, highlightthickness=2)
+        code_frame.pack(pady=10, padx=60, fill="x")
+        tk.Label(
+            code_frame,
+            text=reward_code or "???",
+            bg="#1A1500",
+            fg=GOLD,
+            font=tkfont.Font(family="DejaVu Sans Mono", size=18, weight="bold"),
+            pady=8,
+        ).pack()
+
+        # Next level button
+        btn = tk.Button(
+            win,
+            text="Prêt pour le niveau suivant ? 🚀",
+            command=win.destroy,
+            bg=self.theme_color,
+            fg=BG_DEEP,
+            font=tkfont.Font(family="DejaVu Sans", size=12, weight="bold"),
+            relief="flat",
+            padx=14,
+            pady=8,
+            cursor="hand2",
+        )
+        btn.pack(pady=(12, 0))
+
+        # Auto-close after 15 seconds
+        win.after(15000, lambda: win.destroy() if win.winfo_exists() else None)
 
     def _update_status_bar(self) -> None:
         last_check = self.state.get("last_check", "")
@@ -605,16 +722,56 @@ class MissionWindow(tk.Tk):
         except (ValueError, IndexError):
             next_id = None
 
+        # Detect level transition
+        current_level = self.state.get("current_level", 1)
+        next_mission_level = current_level  # default
+
         if next_id:
+            try:
+                next_mission = self.mission_loader.load_mission(next_id)
+                next_mission_level = next_mission.get("level", current_level)
+            except Exception:
+                pass
+
             self.state["current_mission"] = next_id
             self.state["mission_start_time"] = datetime.now(timezone.utc).isoformat()
             self.state["hints_used"] = 0
+
+            if next_mission_level > current_level:
+                # Level completed — store reward and advance level
+                levels_config = self.config.get("levels", [])
+                level_config = next(
+                    (l for l in levels_config if l["id"] == current_level), {}
+                )
+                reward = level_config.get("reward", "")
+                level_name = level_config.get("name", f"Niveau {current_level}")
+
+                self.state["level_rewards"][str(current_level)] = reward
+                if current_level not in self.state.get("completed_levels", []):
+                    self.state.setdefault("completed_levels", []).append(current_level)
+                self.state["current_level"] = next_mission_level
+                self.state_manager.save(self.state)
+
+                self.after(500, lambda lid=current_level, lname=level_name, rwd=reward:
+                           self._show_level_complete(lid, lname, rwd))
+            else:
+                self.state_manager.save(self.state)
         else:
             # All missions done!
+            levels_config = self.config.get("levels", [])
+            last_level = levels_config[-1] if levels_config else {}
+            reward = last_level.get("reward", self.config.get("secret_code", ""))
+            level_name = last_level.get("name", "")
+            level_id = last_level.get("id", current_level)
+
+            self.state["level_rewards"][str(level_id)] = reward
+            if level_id not in self.state.get("completed_levels", []):
+                self.state.setdefault("completed_levels", []).append(level_id)
+            self.state["current_level"] = level_id
             self.state["final_reward_unlocked"] = True
             self.state["secret_code"] = self.config.get("secret_code", "")
 
-        self.state_manager.save(self.state)
+            self.state_manager.save(self.state)
 
         # Start score animation
         self._score_target = self.state["score"]

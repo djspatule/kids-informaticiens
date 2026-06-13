@@ -1,0 +1,15 @@
+{
+  "id": "mission_09",
+  "level": 2,
+  "title": "🏗️ Mission 9 — Crée ta Station Maths",
+  "description": "Capitaine Romy, bienvenue au Niveau 2 !\n\nAvant de commencer les maths, tu dois construire ta Station Maths. 🚀\n\nCrée un dossier appelé 'Station-Maths' sur ton Bureau.\n\n📁 Bureau → clic droit → Créer un dossier → 'Station-Maths'",
+  "hint": "Clic droit sur le Bureau → 'Créer un dossier' → tape exactement 'Station-Maths'.",
+  "check": {
+    "type": "folder_exists",
+    "path": "{desktop}/Station-Maths"
+  },
+  "success_message": "La Station Maths est construite ! Les calculs peuvent commencer ! 🧮🚀",
+  "next": "mission_10",
+  "points": 10,
+  "image": "assets/illustrations/romy/romy_l2_m09.png"
+}

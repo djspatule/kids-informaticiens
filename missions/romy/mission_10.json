@@ -1,0 +1,17 @@
+{
+  "id": "mission_10",
+  "level": 2,
+  "title": "⭐ Mission 10 — Compter les étoiles",
+  "description": "Regarde l'image ! Combien d'étoiles vois-tu ? ⭐\n\nCompte bien, puis écris le nombre dans un fichier.\n\n📝 Dans 'Station-Maths', crée un fichier 'comptage.txt' et écris le nombre d'étoiles.",
+  "hint": "Ouvre 'Station-Maths' → clic droit → Créer un fichier → 'comptage.txt' → écris le chiffre que tu as compté.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Station-Maths/comptage.txt",
+    "text": "7",
+    "case_sensitive": false
+  },
+  "success_message": "Bravo ! Tu as compté 7 étoiles ! Tu es une vraie astronome ! ⭐🔭",
+  "next": "mission_11",
+  "points": 10,
+  "image": "assets/illustrations/romy/romy_l2_m10.png"
+}

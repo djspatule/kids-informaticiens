@@ -1,0 +1,28 @@
+{
+  "id": "mission_27",
+  "level": 3,
+  "title": "✍️ Mission 27 — Dictée spatiale",
+  "description": "Mission dictée ! Écris cette phrase dans un fichier. ✍️🚀\n\nPhrase : 'Les astronautes voyagent dans l'espace avec leur fusée.'\n\n📝 Dans 'Centre-Communication', crée un fichier 'dictee.txt' et écris la phrase exactement.",
+  "hint": "Ouvre 'Centre-Communication' → créer 'dictee.txt' → écris : Les astronautes voyagent dans l'espace avec leur fusée.",
+  "check": {
+    "type": "all_of",
+    "checks": [
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Centre-Communication/dictee.txt",
+        "text": "astronautes",
+        "case_sensitive": false
+      },
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Centre-Communication/dictee.txt",
+        "text": "espace",
+        "case_sensitive": false
+      }
+    ]
+  },
+  "success_message": "INCROYABLE ! Dictée parfaite ! Niveau 3 terminé ! Tu communiques comme un vrai commandant galactique ! 🏆✍️🚀",
+  "next": "mission_28",
+  "points": 20,
+  "image": "assets/illustrations/oscar/oscar_l3_m27.png"
+}

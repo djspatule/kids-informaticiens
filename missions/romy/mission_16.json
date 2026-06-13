@@ -1,0 +1,17 @@
+{
+  "id": "mission_16",
+  "level": 2,
+  "title": "🌌 Mission 16 — Problème spatial",
+  "description": "Regarde l'image : 3 planètes par galaxie × 4 galaxies = ? 🌌\n\nRésous le problème et écris le résultat.\n\n📝 Dans 'Station-Maths', crée un fichier 'probleme.txt' et écris ta réponse.",
+  "hint": "3 × 4 = ? Compte 3 planètes, puis encore 3, encore 3, encore 3. Écris le résultat dans 'probleme.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Station-Maths/probleme.txt",
+    "text": "12",
+    "case_sensitive": false
+  },
+  "success_message": "INCROYABLE ! 3 × 4 = 12 planètes ! Niveau 2 terminé ! Tu es une mathématicienne de l'espace ! 🏆🌌🚀",
+  "next": "mission_17",
+  "points": 20,
+  "image": "assets/illustrations/romy/romy_l2_m16.png"
+}

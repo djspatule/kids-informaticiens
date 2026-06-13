@@ -1,0 +1,17 @@
+{
+  "id": "mission_12",
+  "level": 2,
+  "title": "🛸 Mission 12 — Soustraction",
+  "description": "Regarde l'image : 52 planètes - 18 planètes = ? 🛸\n\nFais la soustraction et écris le résultat.\n\n📝 Dans 'Station-Maths', crée un fichier 'soustraction.txt' et écris ta réponse.",
+  "hint": "52 - 18 = ? Tu peux utiliser tes doigts ou compter sur papier. Écris le résultat dans 'soustraction.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Station-Maths/soustraction.txt",
+    "text": "34",
+    "case_sensitive": false
+  },
+  "success_message": "Excellent ! 52 - 18 = 34 ! Tu maîtrises les soustractions ! 🌟✨",
+  "next": "mission_13",
+  "points": 10,
+  "image": "assets/illustrations/romy/romy_l2_m12.png"
+}

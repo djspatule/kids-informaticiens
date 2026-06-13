@@ -1,0 +1,32 @@
+{
+  "id": "mission_34",
+  "level": 4,
+  "title": "🏆 Mission 34 — Mission Finale Commandant",
+  "description": "Commandant Oscar, c'est ta DERNIÈRE MISSION ! 🏆🚀\n\nTu as tout maîtrisé ! Signe ton rapport final.\n\n📝 Dans 'Laboratoire-Spatial', crée un fichier 'mission_finale.txt' et écris :\n'Je suis Commandant Oscar, explorateur du cosmos QUASAR'",
+  "hint": "Laboratoire-Spatial → créer 'mission_finale.txt' → écris la phrase exacte avec Oscar et QUASAR dedans.",
+  "check": {
+    "type": "all_of",
+    "checks": [
+      {
+        "type": "file_exists",
+        "path": "{desktop}/Laboratoire-Spatial/mission_finale.txt"
+      },
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Laboratoire-Spatial/mission_finale.txt",
+        "text": "Oscar",
+        "case_sensitive": false
+      },
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Laboratoire-Spatial/mission_finale.txt",
+        "text": "QUASAR",
+        "case_sensitive": false
+      }
+    ]
+  },
+  "success_message": "FÉLICITATIONS COMMANDANT OSCAR! Tu as maîtrisé TOUTES les sciences de l'espace! Tu es un vrai scientifique galactique! 🏆🌟🔭",
+  "next": null,
+  "points": 35,
+  "image": "assets/illustrations/oscar/oscar_l4_m34.png"
+}

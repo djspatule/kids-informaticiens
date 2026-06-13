@@ -1,5 +1,6 @@
 {
   "id": "mission_08",
+  "level": 1,
   "title": "🔑 Mission 8 — Code de sécurité",
   "description": "Mission confidentielle, Commandant !\n\nRenomme le fichier 'rapport-01.txt' en 'rapport-classifie.txt' dans le dossier Rapports.\n\nCe fichier est maintenant classifié niveau 5 — le plus haut niveau de sécurité galactique !",
   "hint": "Base-Spatiale → Rapports → clic droit sur rapport-01.txt → Renommer → tape 'rapport-classifie.txt'",

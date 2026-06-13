@@ -1,0 +1,17 @@
+{
+  "id": "mission_15",
+  "level": 2,
+  "title": "📐 Mission 15 — Périmètre",
+  "description": "Regarde l'image : un rectangle 7cm × 3cm ! 📐\n\nCalcule son périmètre : P = 2 × (7 + 3) = ?\n\n📝 Dans 'Module-Mathematiques', crée un fichier 'perimetre.txt' et écris le résultat en cm.",
+  "hint": "P = 2 × (7+3) = 2 × 10 = 20 cm. Écris '20' dans 'perimetre.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Module-Mathematiques/perimetre.txt",
+    "text": "20",
+    "case_sensitive": false
+  },
+  "success_message": "Super ! P = 20 cm ! Tu calcules le périmètre comme un ingénieur spatial ! 📐🌟",
+  "next": "mission_16",
+  "points": 20,
+  "image": "assets/illustrations/oscar/oscar_l2_m15.png"
+}

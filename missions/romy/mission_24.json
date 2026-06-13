@@ -1,0 +1,28 @@
+{
+  "id": "mission_24",
+  "level": 3,
+  "title": "🇬🇧 Mission 24 — English : Me présenter",
+  "description": "Dernière mission du Vaisseau du Langage ! 🇬🇧\n\nPrésente-toi en anglais ! Écris cette phrase :\n'My name is Romy'\n\n📝 Dans 'Vaisseau-Langage', crée un fichier 'english.txt' et écris la phrase.",
+  "hint": "Écris exactement : My name is Romy — dans le fichier 'english.txt'.",
+  "check": {
+    "type": "all_of",
+    "checks": [
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Vaisseau-Langage/english.txt",
+        "text": "my name is",
+        "case_sensitive": false
+      },
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Vaisseau-Langage/english.txt",
+        "text": "romy",
+        "case_sensitive": false
+      }
+    ]
+  },
+  "success_message": "AMAZING ! 'My name is Romy !' Niveau 3 terminé ! Tu parles français ET anglais ! 🇬🇧🏆🚀",
+  "next": "mission_25",
+  "points": 15,
+  "image": "assets/illustrations/romy/romy_l3_m24.png"
+}

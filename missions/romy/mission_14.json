@@ -1,0 +1,17 @@
+{
+  "id": "mission_14",
+  "level": 2,
+  "title": "⭐ Mission 14 — La table de 5",
+  "description": "Regarde l'image : 5 × 4 = ? ⭐\n\nC'est la table de 5 ! Calcule et écris le résultat.\n\n📝 Dans 'Station-Maths', crée un fichier 'table5.txt' et écris ta réponse.",
+  "hint": "5 × 4 : compte par 5 quatre fois (5, 10, 15, 20). Écris le résultat dans 'table5.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Station-Maths/table5.txt",
+    "text": "20",
+    "case_sensitive": false
+  },
+  "success_message": "Génial ! 5 × 4 = 20 ! La table de 5 c'est facile pour toi ! ⭐🎉",
+  "next": "mission_15",
+  "points": 15,
+  "image": "assets/illustrations/romy/romy_l2_m14.png"
+}

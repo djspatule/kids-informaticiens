@@ -1,0 +1,15 @@
+{
+  "id": "mission_19",
+  "level": 3,
+  "title": "📡 Mission 19 — Ouvre le Centre Communication",
+  "description": "Commandant Oscar, bienvenue au Niveau 3 ! 📡🚀\n\nC'est le Centre Communication ! Français et anglais t'attendent.\n\nCrée un dossier 'Centre-Communication' sur ton Bureau.\n\n📁 Bureau → clic droit → Créer un dossier → 'Centre-Communication'",
+  "hint": "Clic droit sur le Bureau → 'Créer un dossier' → tape exactement 'Centre-Communication'.",
+  "check": {
+    "type": "folder_exists",
+    "path": "{desktop}/Centre-Communication"
+  },
+  "success_message": "Centre Communication ouvert ! Les transmissions peuvent commencer ! 📡🌟🚀",
+  "next": "mission_20",
+  "points": 10,
+  "image": "assets/illustrations/oscar/oscar_l3_m19.png"
+}

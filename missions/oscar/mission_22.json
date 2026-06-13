@@ -1,0 +1,17 @@
+{
+  "id": "mission_22",
+  "level": 3,
+  "title": "🌍 Mission 22 — Accord sujet-verbe",
+  "description": "Regarde l'image : 'Les astronautes [voyage / voyagent] ?' 🌍\n\nQuelle est la bonne forme du verbe ?\n\n📝 Dans 'Centre-Communication', crée un fichier 'accord.txt' et écris la bonne réponse.",
+  "hint": "'Les astronautes' est un sujet pluriel → le verbe prend -nt. On écrit 'voyagent'. Écris 'voyagent' dans 'accord.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Centre-Communication/accord.txt",
+    "text": "voyagent",
+    "case_sensitive": false
+  },
+  "success_message": "Correct ! 'Les astronautes VOYAGENT !' L'accord sujet-verbe, aucun problème ! 🌍📝🏆",
+  "next": "mission_23",
+  "points": 15,
+  "image": "assets/illustrations/oscar/oscar_l3_m22.png"
+}

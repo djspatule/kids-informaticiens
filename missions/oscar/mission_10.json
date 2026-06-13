@@ -1,0 +1,15 @@
+{
+  "id": "mission_10",
+  "level": 2,
+  "title": "🧮 Mission 10 — Crée ton Module Maths",
+  "description": "Commandant Oscar, bienvenue au Niveau 2 ! 🧮🚀\n\nC'est le Module Mathématique ! Les vrais calculs commencent.\n\nCrée un dossier 'Module-Mathematiques' sur ton Bureau.\n\n📁 Bureau → clic droit → Créer un dossier → 'Module-Mathematiques'",
+  "hint": "Clic droit sur le Bureau → 'Créer un dossier' → tape exactement 'Module-Mathematiques'.",
+  "check": {
+    "type": "folder_exists",
+    "path": "{desktop}/Module-Mathematiques"
+  },
+  "success_message": "Module Mathématique activé ! Les équations de l'espace t'attendent ! 🧮🚀⭐",
+  "next": "mission_11",
+  "points": 10,
+  "image": "assets/illustrations/oscar/oscar_l2_m10.png"
+}

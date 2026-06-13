@@ -1,0 +1,28 @@
+{
+  "id": "mission_20",
+  "level": 3,
+  "title": "⚽ Mission 20 — Passé composé",
+  "description": "Regarde l'image : 'Hier, il ___ (jouer) au football.' ⚽\n\nConjugue le verbe jouer au passé composé !\n\n📝 Dans 'Centre-Communication', crée un fichier 'passe_compose.txt' et écris la bonne forme.",
+  "hint": "Passé composé de jouer pour 'il' : il a joué. On écrit le participe passé : 'joué'. Écris 'joué' dans 'passe_compose.txt'.",
+  "check": {
+    "type": "any_of",
+    "checks": [
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Centre-Communication/passe_compose.txt",
+        "text": "joué",
+        "case_sensitive": false
+      },
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Centre-Communication/passe_compose.txt",
+        "text": "joue",
+        "case_sensitive": false
+      }
+    ]
+  },
+  "success_message": "Parfait ! 'Il a JOUÉ au football !' Le passé composé est maîtrisé ! ⚽📝🌟",
+  "next": "mission_21",
+  "points": 15,
+  "image": "assets/illustrations/oscar/oscar_l3_m20.png"
+}

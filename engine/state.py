@@ -32,6 +32,7 @@ class StateManager:
             try:
                 with open(self.save_path, "r", encoding="utf-8") as fh:
                     state = json.load(fh)
+                state = self.migrate_state(state)
                 logger.info("State loaded from %s", self.save_path)
                 return state
             except (json.JSONDecodeError, OSError) as exc:
@@ -66,6 +67,16 @@ class StateManager:
     # Internal helpers
     # ------------------------------------------------------------------
 
+    def migrate_state(self, state: dict) -> dict:
+        """Add missing fields to old save files (backward compat)."""
+        if "current_level" not in state:
+            state["current_level"] = 1
+        if "completed_levels" not in state:
+            state["completed_levels"] = []
+        if "level_rewards" not in state:
+            state["level_rewards"] = {}
+        return state
+
     @staticmethod
     def _create_fresh(player: str, config: dict) -> dict:
         """Return a new, empty state dict for the given player."""
@@ -83,4 +94,7 @@ class StateManager:
             "hints_used": 0,
             "score": 0,
             "version": 1,
+            "current_level": 1,
+            "completed_levels": [],
+            "level_rewards": {},
         }

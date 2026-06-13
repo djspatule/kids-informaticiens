@@ -1,0 +1,17 @@
+{
+  "id": "mission_19",
+  "level": 3,
+  "title": "⚽ Mission 19 — Verbe 'jouer'",
+  "description": "Regarde l'image : 'Il ___ au foot.' (verbe jouer, présent) ⚽\n\nQuel est le bon mot ?\n\n📝 Dans 'Vaisseau-Langage', crée un fichier 'jouer.txt' et écris la bonne forme du verbe.",
+  "hint": "Pour 'il' avec un verbe en -er : il joue (on enlève -er, on ajoute -e). Écris 'joue' dans 'jouer.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Vaisseau-Langage/jouer.txt",
+    "text": "joue",
+    "case_sensitive": false
+  },
+  "success_message": "Super ! 'Il JOUE au foot !' Les verbes en -er sont faciles pour toi ! ⚽🎉",
+  "next": "mission_20",
+  "points": 15,
+  "image": "assets/illustrations/romy/romy_l3_m19.png"
+}

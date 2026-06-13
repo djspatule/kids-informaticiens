@@ -1,0 +1,15 @@
+{
+  "id": "mission_28",
+  "level": 4,
+  "title": "🔬 Mission 28 — Ouvre le Laboratoire",
+  "description": "Commandant Oscar, bienvenue au Niveau 4 ! 🔬🚀\n\nC'est le Laboratoire Spatial ! Les sciences de l'espace t'attendent.\n\nCrée un dossier 'Laboratoire-Spatial' sur ton Bureau.\n\n📁 Bureau → clic droit → Créer un dossier → 'Laboratoire-Spatial'",
+  "hint": "Clic droit sur le Bureau → 'Créer un dossier' → tape exactement 'Laboratoire-Spatial'.",
+  "check": {
+    "type": "folder_exists",
+    "path": "{desktop}/Laboratoire-Spatial"
+  },
+  "success_message": "Laboratoire Spatial ouvert ! Les expériences scientifiques peuvent commencer ! 🔬⭐🚀",
+  "next": "mission_29",
+  "points": 10,
+  "image": "assets/illustrations/oscar/oscar_l4_m28.png"
+}

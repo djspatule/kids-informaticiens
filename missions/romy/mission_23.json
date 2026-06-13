@@ -1,0 +1,17 @@
+{
+  "id": "mission_23",
+  "level": 3,
+  "title": "🔢 Mission 23 — English : Les chiffres",
+  "description": "Encore de l'anglais ! 🇬🇧🔢\n\nRegarde l'image : 5 étoiles ! ⭐⭐⭐⭐⭐\n\nComment dit-on '5' en anglais ?\n\n📝 Dans 'Vaisseau-Langage', crée un fichier 'chiffre.txt' et écris la réponse.",
+  "hint": "Le chiffre 5 en anglais = FIVE. Écris 'five' dans le fichier 'chiffre.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Vaisseau-Langage/chiffre.txt",
+    "text": "five",
+    "case_sensitive": false
+  },
+  "success_message": "Five = 5 ! Excellent ! Tu comptes en anglais maintenant ! 🔢🇬🇧🎉",
+  "next": "mission_24",
+  "points": 10,
+  "image": "assets/illustrations/romy/romy_l3_m23.png"
+}

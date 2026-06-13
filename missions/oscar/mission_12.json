@@ -1,0 +1,17 @@
+{
+  "id": "mission_12",
+  "level": 2,
+  "title": "➗ Mission 12 — Division",
+  "description": "Les astronautes partagent équitablement ! ➗\n\n156 ÷ 4 = ?\n\nFais la division et écris le résultat.\n\n📝 Dans 'Module-Mathematiques', crée un fichier 'division.txt' et écris ta réponse.",
+  "hint": "156 ÷ 4 : 4×30=120, reste 36 ; 4×9=36. Donc 30+9 = 39. Écris '39' dans 'division.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Module-Mathematiques/division.txt",
+    "text": "39",
+    "case_sensitive": false
+  },
+  "success_message": "Parfait ! 156 ÷ 4 = 39 ! Tu divises comme un vrai commandant ! ➗🌟",
+  "next": "mission_13",
+  "points": 15,
+  "image": "assets/illustrations/oscar/oscar_l2_m12.png"
+}

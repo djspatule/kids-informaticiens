@@ -1,0 +1,17 @@
+{
+  "id": "mission_32",
+  "level": 4,
+  "title": "🔴 Mission 32 — Système solaire",
+  "description": "Regarde l'image du système solaire ! 🔴🚀\n\nMercure, Vénus, Terre, ___...\n\nQuelle est la 4ème planète du système solaire ?\n\n📝 Dans 'Laboratoire-Spatial', crée un fichier 'planete4.txt' et écris son nom.",
+  "hint": "Mercure (1), Vénus (2), Terre (3), MARS (4). Écris 'mars' dans 'planete4.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Laboratoire-Spatial/planete4.txt",
+    "text": "mars",
+    "case_sensitive": false
+  },
+  "success_message": "Excellent ! La 4ème planète c'est MARS ! Tu connais le système solaire par coeur ! 🔴🚀⭐",
+  "next": "mission_33",
+  "points": 15,
+  "image": "assets/illustrations/oscar/oscar_l4_m32.png"
+}

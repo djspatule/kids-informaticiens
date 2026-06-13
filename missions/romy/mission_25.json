@@ -1,0 +1,15 @@
+{
+  "id": "mission_25",
+  "level": 4,
+  "title": "🔬 Mission 25 — Crée ton Laboratoire",
+  "description": "Bienvenue au Niveau 4, Capitaine Romy ! 🔬🚀\n\nC'est la Planète des Sciences ! Tu vas découvrir les secrets de l'univers.\n\nCrée un dossier 'Planete-Sciences' sur ton Bureau.\n\n📁 Bureau → clic droit → Créer un dossier → 'Planete-Sciences'",
+  "hint": "Clic droit sur le Bureau → 'Créer un dossier' → tape exactement 'Planete-Sciences'.",
+  "check": {
+    "type": "folder_exists",
+    "path": "{desktop}/Planete-Sciences"
+  },
+  "success_message": "Le laboratoire scientifique est ouvert ! Les expériences peuvent commencer ! 🔬⭐🚀",
+  "next": "mission_26",
+  "points": 10,
+  "image": "assets/illustrations/romy/romy_l4_m25.png"
+}

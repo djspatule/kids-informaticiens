@@ -1,0 +1,28 @@
+{
+  "id": "mission_29",
+  "level": 4,
+  "title": "👁️ Mission 29 — Les 5 sens",
+  "description": "Regarde l'image ! Avec quoi voit-on ? 👁️\n\nNotre corps a 5 sens : la vue, l'ouïe, l'odorat, le toucher, le goût.\n\n📝 Dans 'Planete-Sciences', crée un fichier 'sens.txt' et écris avec quoi on voit.",
+  "hint": "On voit avec les... YEUX ! Écris 'yeux' (ou 'vue') dans le fichier 'sens.txt'.",
+  "check": {
+    "type": "any_of",
+    "checks": [
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Planete-Sciences/sens.txt",
+        "text": "yeux",
+        "case_sensitive": false
+      },
+      {
+        "type": "file_contains",
+        "path": "{desktop}/Planete-Sciences/sens.txt",
+        "text": "vue",
+        "case_sensitive": false
+      }
+    ]
+  },
+  "success_message": "Exact ! On voit avec les YEUX ! Tu connais les 5 sens ! 👁️🎉✨",
+  "next": "mission_30",
+  "points": 15,
+  "image": "assets/illustrations/romy/romy_l4_m29.png"
+}

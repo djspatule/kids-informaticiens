@@ -93,11 +93,17 @@ def _print_status(player: str, config: dict) -> None:
     hints = state.get("hints_used", 0)
     reward = state.get("final_reward_unlocked", False)
 
+    current_level = state.get("current_level", 1)
+    rewards = state.get("level_rewards", {})
+
     print(f"\n=== Mission Espace — Statut de {config.get('display_name', player)} ===")
     print(f"  Missions terminées : {len(completed)} / {total}")
     print(f"  Mission en cours   : {current}")
     print(f"  Score              : {score} pts")
     print(f"  Indices utilisés   : {hints}")
+    print(f"  Niveau actuel      : {current_level} / 4")
+    if rewards:
+        print(f"  Codes de niveau    : {', '.join(rewards.values())}")
     print(f"  Récompense finale  : {'OUI 🏆' if reward else 'pas encore'}")
     if completed:
         print(f"  Complétées         : {', '.join(completed)}")

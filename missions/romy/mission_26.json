@@ -1,0 +1,17 @@
+{
+  "id": "mission_26",
+  "level": 4,
+  "title": "🌍 Mission 26 — Les planètes",
+  "description": "Regarde l'image du système solaire ! 🌍\n\nQuelle planète est la plus proche du Soleil ?\n\n📝 Dans 'Planete-Sciences', crée un fichier 'planete_proche.txt' et écris le nom de cette planète.",
+  "hint": "La planète la plus proche du Soleil commence par M... C'est MERCURE ! Écris 'mercure' dans 'planete_proche.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Planete-Sciences/planete_proche.txt",
+    "text": "mercure",
+    "case_sensitive": false
+  },
+  "success_message": "Exact ! Mercure est la planète la plus proche du Soleil ! Tu connais le système solaire ! 🌍⭐🔭",
+  "next": "mission_27",
+  "points": 15,
+  "image": "assets/illustrations/romy/romy_l4_m26.png"
+}

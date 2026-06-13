@@ -1,0 +1,17 @@
+{
+  "id": "mission_13",
+  "level": 2,
+  "title": "✖️ Mission 13 — La table de 2",
+  "description": "Regarde l'image : 2 × 6 = ? 🌙\n\nC'est la table de 2 ! Calcule et écris le résultat.\n\n📝 Dans 'Station-Maths', crée un fichier 'table2.txt' et écris ta réponse.",
+  "hint": "2 × 6 : compte par 2 six fois (2, 4, 6, 8, 10, 12). Écris le résultat dans 'table2.txt'.",
+  "check": {
+    "type": "file_contains",
+    "path": "{desktop}/Station-Maths/table2.txt",
+    "text": "12",
+    "case_sensitive": false
+  },
+  "success_message": "Parfait ! 2 × 6 = 12 ! La table de 2 n'a plus de secrets pour toi ! 🌙✖️",
+  "next": "mission_14",
+  "points": 15,
+  "image": "assets/illustrations/romy/romy_l2_m13.png"
+}
