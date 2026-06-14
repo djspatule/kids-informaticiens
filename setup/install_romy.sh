@@ -32,10 +32,9 @@ if ! id romy &>/dev/null; then
     exit 1
 fi
 
-# Détecter le dossier Desktop (Bureau) de Romy — utilise xdg-user-dir, défaut Desktop
-BUREAU=$(sudo -u romy xdg-user-dir DESKTOP 2>/dev/null || echo "$HOME_ROMY/Desktop")
-# Assurer que le chemin est absolu et non vide
-[[ -z "$BUREAU" || "$BUREAU" == "$HOME_ROMY" ]] && BUREAU="$HOME_ROMY/Desktop"
+# Desktop folder — always English name (XFCE on this machine uses LANG=en_US)
+BUREAU="$HOME_ROMY/Desktop"
+mkdir -p "$BUREAU"
 info "Bureau détecté : $BUREAU"
 
 # ---------------------------------------------------------------------------

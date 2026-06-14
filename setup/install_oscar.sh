@@ -31,10 +31,9 @@ if ! id oscar &>/dev/null; then
     exit 1
 fi
 
-# Détecter le dossier Desktop (Bureau) d'Oscar — utilise xdg-user-dir, défaut Desktop
-BUREAU=$(sudo -u oscar xdg-user-dir DESKTOP 2>/dev/null || echo "$HOME_OSCAR/Desktop")
-# Assurer que le chemin est absolu et non vide
-[[ -z "$BUREAU" || "$BUREAU" == "$HOME_OSCAR" ]] && BUREAU="$HOME_OSCAR/Desktop"
+# Desktop folder — always English name (XFCE on this machine uses LANG=en_US)
+BUREAU="$HOME_OSCAR/Desktop"
+mkdir -p "$BUREAU"
 info "Bureau détecté : $BUREAU"
 
 # ---------------------------------------------------------------------------
