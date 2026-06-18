@@ -54,19 +54,7 @@ rsync -avz --exclude='.git' --exclude='__pycache__' --exclude='*.pyc' \
 
 # Exécuter l'installation en root via sudo
 info "Installation sur kidsbook (nécessite le mot de passe sudo de daddy)..."
-ssh daddy@$KIDSBOOK << ENDSSH
-    set -e
-    # Créer le répertoire de déploiement final
-    sudo mkdir -p $DEPLOY_TARGET
-    sudo rsync -a /tmp/mission-espace/ $DEPLOY_TARGET/
-    sudo chmod -R o+rX $DEPLOY_TARGET
-    sudo chmod 1777 $DEPLOY_TARGET/logs 2>/dev/null || sudo mkdir -p $DEPLOY_TARGET/logs && sudo chmod 1777 $DEPLOY_TARGET/logs
-    
-    # Lancer l'installation
-    sudo bash $DEPLOY_TARGET/setup/install.sh
-    
-    echo "Déploiement terminé !"
-ENDSSH
+ssh -tt daddy@$KIDSBOOK "sudo bash -lc 'set -e; mkdir -p $DEPLOY_TARGET; rsync -a /tmp/mission-espace/ $DEPLOY_TARGET/; chmod -R o+rX $DEPLOY_TARGET; mkdir -p $DEPLOY_TARGET/logs; chmod 1777 $DEPLOY_TARGET/logs; bash $DEPLOY_TARGET/setup/install.sh; echo Déploiement terminé !'"
 
 success "Jeu déployé sur kidsbook : $DEPLOY_TARGET"
 echo ""

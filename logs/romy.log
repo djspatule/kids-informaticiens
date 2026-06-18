@@ -150,3 +150,22 @@
 2026-06-13T23:12:08Z INFO     __main__ — === Mission Espace démarré — joueur: romy ===
 2026-06-13T23:13:48Z INFO     __main__ — === Mission Espace démarré — joueur: romy ===
 2026-06-13T23:21:36Z INFO     __main__ — === Mission Espace démarré — joueur: romy ===
+2026-06-13T23:39:00Z INFO     __main__ — === Mission Espace démarré — joueur: romy ===
+2026-06-13T23:39:00Z WARNING  checks.desktop_checks — xfconf-query not found — cannot detect wallpaper.
+2026-06-13T23:39:00Z ERROR    engine.state — Failed to save state: [Errno 13] Permission denied: '/home/romy'
+2026-06-13T23:39:00Z INFO     __main__ — Initial wallpaper recorded: 
+2026-06-13T21:39:00Z  GAME_START                version=1.0.0
+2026-06-13T23:39:00Z INFO     __main__ — Starting GUI — current_mission=mission_01 score=0
+2026-06-13T23:39:03Z ERROR    engine.state — Failed to save state: [Errno 13] Permission denied: '/home/romy'
+2026-06-13T23:39:05Z ERROR    engine.state — Failed to save state: [Errno 13] Permission denied: '/home/romy'
+2026-06-13T23:39:07Z ERROR    engine.state — Failed to save state: [Errno 13] Permission denied: '/home/romy'
+2026-06-13T23:39:09Z ERROR    engine.state — Failed to save state: [Errno 13] Permission denied: '/home/romy'
+2026-06-13T23:39:11Z ERROR    engine.state — Failed to save state: [Errno 13] Permission denied: '/home/romy'
+2026-06-13T23:39:13Z ERROR    engine.state — Failed to save state: [Errno 13] Permission denied: '/home/romy'
+2026-06-13T23:39:15Z ERROR    engine.state — Failed to save state: [Errno 13] Permission denied: '/home/romy'
+2026-06-13T23:39:17Z ERROR    engine.state — Failed to save state: [Errno 13] Permission denied: '/home/romy'
+2026-06-13T23:39:18Z ERROR    engine.state — Failed to save state: [Errno 13] Permission denied: '/home/romy'
+2026-06-13T23:39:19Z ERROR    engine.state — Failed to save state: [Errno 13] Permission denied: '/home/romy'
+2026-06-13T23:39:21Z ERROR    engine.state — Failed to save state: [Errno 13] Permission denied: '/home/romy'
+2026-06-13T23:39:22Z INFO     __main__ — === Mission Espace terminé — joueur: romy ===
+2026-06-13T21:39:22Z  GAME_EXIT                 

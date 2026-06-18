@@ -136,7 +136,7 @@ for SEARCH_DIR in \
             if [[ ! -f "$WALLPAPER_DST/$BASENAME" ]]; then
                 cp "$img" "$WALLPAPER_DST/$BASENAME" 2>/dev/null && {
                     info "  Fond d'écran copié : $BASENAME"
-                    (( WALLPAPER_COUNT++ ))
+                    WALLPAPER_COUNT=$((WALLPAPER_COUNT + 1))
                 }
             fi
         done < <(find "$SEARCH_DIR" -maxdepth 2 \( -name "*.jpg" -o -name "*.png" \) -print0 2>/dev/null)
